@@ -106,7 +106,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-#Mis propios alias - My own aliases:
+# Mis propios alias - My own aliases:
 
 alias alib='alias | more -n 6'
 alias bt='bashtop'
@@ -137,7 +137,7 @@ alias sreload='sudo systemctl reload'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
 alias svim='sudo vi'
-alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lspci; cat /proc/version; diskusage; df -hl -x squashfs; temp;'
+alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lspci; cat /proc/version; diskusage; df -hl -x squashfs; temp; nft'
 alias tree-size='tree -s -h --du'
 alias tree-x='tree -I'
 alias ttrunk='tree -a -C'
@@ -148,6 +148,7 @@ alias whack='sudo systemctl restart'
 alias wut='whatis'
 
 
+# Autocompletación
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -167,5 +168,4 @@ if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
 	POWERLINE_BASH_SELECT=1
 	source /usr/share/powerline/bindings/bash/powerline.sh
 fi
-
 
