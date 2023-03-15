@@ -132,7 +132,7 @@ alias nft='neofetch'
 alias nyan='nyancat -n'
 alias port='netstat -tulanp'
 alias servlist='sudo service --status-all'
-alias speedy='mount -t tmpfs -o size=1024M tmpfs /media/rammy' #RAMDISK temporal que se va con apagado
+alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' #RAMDISK temporal que se va con apagado
 alias sreload='sudo systemctl reload'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
