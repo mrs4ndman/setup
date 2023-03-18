@@ -1,6 +1,61 @@
+" Requiere la instalación que estará lista en 2 días por mi parte + fuentes Powerline :/
+" Enable syntax highlighting | Habilita marcado de texto en colorines
+syntax on
 
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+" Enable filetype detection | Habilita la detección de formato de archivos
+filetype plugin indent on
 
-set laststatus=2
+" Zona donde colocas los plugins (Este gestor de plug-ins es vim-plug / Plug
+call plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+
+" Enable line numbers | Habilita números de línea en el lateral
+set number
+
+" Enable mouse support | Habilita interacción del ratón con el cursorn
+set mouse=a
+
+" Use the system clipboard | Usa el portapapeles del sistema, en vez del
+" propio
+set clipboard=unnamedplus
+
+" Enable auto-completion | Habilita una forma sencilla de autocompletado
+set completeopt=menuone,longest,preview
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+
+" Set the default tab width to 4 spaces | Define el tabulado como 4 espacios
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Enable folding | Permite recoger código para una mejor vista
+set foldmethod=indent
+set foldlevel=99
+
+" Highlight search results | Resalta los resultados de búsqueda
+set hlsearch
+set incsearch
+
+" Enable code linting with Ale | Permite linting del código
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_insert_leave = 1
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
+let g:ale_fixers = {
+      \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \ 'javascript': ['eslint', 'prettier'],
+      \ }
+let g:ale_linters = {
+      \ 'javascript': ['eslint'],
+      \ }
+
+" Habilitamos las fuentes de Powerline (de mis otros scripts) y la caché.
+
+let g:airline_powerline_fonts = 1
+:let g:airline_highlighting_cache = 1
+
+" Set the color scheme | Lugar definido para esquemas de colores custom
