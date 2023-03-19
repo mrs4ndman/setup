@@ -143,6 +143,7 @@ alias tree-x='tree -I'
 alias ttrunk='tree -a -C'
 alias untar='tar xvf'
 alias vimbash='vim ~/.bashrc'
+alias vrc='vim ~/.vimrc'
 alias vls="watch -n 0.1 ls -l"
 alias whack='sudo systemctl restart'
 alias wut='whatis'
