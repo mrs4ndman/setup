@@ -9,17 +9,25 @@ call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'farmergreg/vim-lastplace'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-"
+" Configuración cambio modo y línea de modos
 set ttimeoutlen=10
+set noshowmode
+
+" Encoding | Codificación
+
+set encoding=UTF-8
 
 " Enable line numbers | Habilita números de línea en el lateral
-set number
+set number relativenumber
 
 " Enable mouse support | Habilita interacción del ratón con el cursor en modo
 " Insert
-" set mouse=i
+set mouse=i
 
 " Use the system clipboard | Usa el portapapeles del sistema, en vez del
 " propio
@@ -56,6 +64,10 @@ let g:ale_linters = {
       \ 'javascript': ['eslint'],
       \ }
 
+" Configuración NERDTree (atajo de teclado)
+
+silent nnoremap <C-n> :NERDTreeToggle<CR>
+
 " Habilitamos las fuentes de Powerline (de mis otros scripts) y la caché.
 
 let g:airline_powerline_fonts = 1
@@ -63,5 +75,5 @@ let g:airline_powerline_fonts = 1
 
 " Set the color scheme | Lugar definido para esquemas de colores custom
 
-
+let g:airline_theme='dark'
 
