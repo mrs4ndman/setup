@@ -1,23 +1,27 @@
-" Requiere la instalación que estará lista en 2 días por mi parte + fuentes Powerline :/
 " Enable syntax highlighting | Habilita marcado de texto en colorines
 syntax on
 
 " Enable filetype detection | Habilita la detección de formato de archivos
 filetype plugin indent on
 
+fi
+
 " Zona donde colocas los plugins (Este gestor de plug-ins es vim-plug / Plug
 call plug#begin('~/.vim/plugged')
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+"
+set ttimeoutlen=10
 
 " Enable line numbers | Habilita números de línea en el lateral
 set number
 
-" Enable mouse support | Habilita interacción del ratón con el cursorn
-set mouse=a
+" Enable mouse support | Habilita interacción del ratón con el cursor en modo
+" Insert
+" set mouse=i
 
 " Use the system clipboard | Usa el portapapeles del sistema, en vez del
 " propio
@@ -41,6 +45,7 @@ set hlsearch
 set incsearch
 
 " Enable code linting with Ale | Permite linting del código
+let g:ale_completion_enabled = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_insert_leave = 1
 let g:ale_sign_error = '✖'
@@ -59,3 +64,6 @@ let g:airline_powerline_fonts = 1
 :let g:airline_highlighting_cache = 1
 
 " Set the color scheme | Lugar definido para esquemas de colores custom
+
+
+
