@@ -4,8 +4,6 @@ syntax on
 " Enable filetype detection | Habilita la detección de formato de archivos
 filetype plugin indent on
 
-fi
-
 " Zona donde colocas los plugins (Este gestor de plug-ins es vim-plug / Plug
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
