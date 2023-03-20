@@ -1,7 +1,7 @@
 # setup
 ## .bashrc y .vimrc por ahora | .bashrc and .vimrc for now
 ### Van acompañados de los [scripts](https://github.com/mrs4ndman/base/tree/main/scripts) del otro [repositorio](https://github.com/mrs4ndman/base)
-- \- config.conf es el archivo custom de mi Neofetch -
+\- config.conf es el archivo custom de mi Neofetch -
 
 Abierto a sugerencias | Open to suggestions
 
