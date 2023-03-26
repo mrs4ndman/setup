@@ -108,6 +108,7 @@ fi
 
 # Mis propios alias - My own aliases:
 
+alias afk='watch -n 1 neofetch --stdout | lolcat'
 alias alib='alias | more -n 6'
 alias bt='bashtop'
 alias bonk='exit'
@@ -139,6 +140,7 @@ alias temps='psensor'
 alias nft='neofetch'
 alias nyan='nyancat -n'
 alias ports='sudo lsof -l -P -n | grep LISTEN'
+
 alias servlist='sudo service --status-all'
 alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' #RAMDISK temporal que se va con apagado
 alias sreload='sudo systemctl reload'
