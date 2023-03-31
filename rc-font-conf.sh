@@ -19,9 +19,10 @@ wget https://raw.githubusercontent.com/mrs4ndman/setup/main/.bashrc; mv -f .bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-#3º- Fuentes / Fonts
+#3º- Fuentes / Fonts: Droid Sans Mono Nerdfont + Jetbrains Mono Standard
 
-wget https://github.com/ryanoasis/nerd-fonts/blob/ad7cf8faddf38ea56db88be251c834419a424981/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf && sudo mv Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf /usr/share/fonts/
+wget https://github.com/ryanoasis/nerd-fonts/blob/ad7cf8faddf38ea56db88be251c834419a424981/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf && sudo mv Droid\ Sans\ Mono\ Nerd\ Font\ Complete.otf /usr/share/fonts/ && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)" && wget https://github.com/ryanoasis/nerd-fonts/blob/dfd186c2a43fa45409ba2a3d5d5ab831fba6fc01/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Regular.ttf && sudo mv JetBrains\ Mono\ Nerd\ Font\ Complete\ Regular.ttf /usr/share/fonts/truetype/
+
 
     sleep 1
     echo "Ya se han descargado e instalado todos los archivos de configuración"
@@ -33,3 +34,4 @@ else
     exit 0
 
 fi
+
