@@ -145,7 +145,7 @@ alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' #RAMDISK tem
 alias sreload='sudo systemctl reload'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
-alias svim='sudo vi'
+alias svim='sudo vim'
 alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lspci; cat /proc/version; diskusage; df -hl -x squashfs; temp; nft'
 alias tree-size='tree -s -h --du'
 alias tree-x='tree -I'
