@@ -140,12 +140,14 @@ alias temps='psensor'
 alias nft='neofetch'
 alias nyan='nyancat -n'
 alias ports='sudo lsof -l -P -n | grep LISTEN'
+alias powershell='pwsh'
+alias powsh='pwsh'
 alias servlist='sudo service --status-all'
 alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' #RAMDISK temporal que se va con apagado
 alias sreload='sudo systemctl reload'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
-alias svim='sudo vim'
+alias svim='sudo vi'
 alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lspci; cat /proc/version; diskusage; df -hl -x squashfs; temp; nft'
 alias tree-size='tree -s -h --du'
 alias tree-x='tree -I'
@@ -180,3 +182,4 @@ if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
 	source /usr/share/powerline/bindings/bash/powerline.sh
 fi
 
+. "$HOME/.cargo/env"
