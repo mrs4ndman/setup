@@ -115,6 +115,7 @@ alias bonk='exit'
 alias boop='sudo systemctl restart'
 alias bup="source ~/.bashrc && echo 'El .bashrc se actualizó con éxito'"
 alias cat!='sudo cat'
+alias cl='clear'
 alias cls='clear;ls -lh'
 alias did="history | grep"
 alias empty-can='trash-empty'
@@ -138,6 +139,7 @@ alias missile='sudo find / -name 2>/dev/null'
 alias need='sudo apt search'
 alias temps='psensor'
 alias nft='neofetch'
+alias nvrc='nvim .config/nvim/init.vim'
 alias nyan='nyancat -n'
 alias ports='sudo lsof -l -P -n | grep LISTEN'
 alias powershell='pwsh'
@@ -147,7 +149,7 @@ alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' #RAMDISK tem
 alias sreload='sudo systemctl reload'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
-alias svim='sudo vim'
+alias svim='sudo vi'
 alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lspci; cat /proc/version; diskusage; df -hl -x squashfs; temp; nft'
 alias tree-size='tree -s -h --du'
 alias tree-x='tree -I'
@@ -181,3 +183,4 @@ if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
 	POWERLINE_BASH_SELECT=1
 	source /usr/share/powerline/bindings/bash/powerline.sh
 fi
+
