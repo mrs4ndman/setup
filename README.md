@@ -7,6 +7,7 @@
 - config.conf : Archivo custom de mi Neofetch | Custom neofetch config
 - rc-font-conf.sh : Ayuda a configurar mi setup de nuevo | Setup script for the repo
 - init.vim : .config/nvim/init.vim para configurar neovim como editor con un solo archivo | single file neovim editor config file
+- alacritty.yml : Archivo de configuración de tipo YAML para configurar mi terminal actual, Alacritty | YAML single config file for my current terminal, Alacritty
 
 ### Abierto a sugerencias | Open to suggestions
 
