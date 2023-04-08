@@ -72,13 +72,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'farmergreg/vim-lastplace'
 Plug 'preservim/nerdtree'
+Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install'} 
+Plug 'leafgarland/typescript-vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
-Plug 'airblade/vim-gitgutter'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install'}
-Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
@@ -110,7 +111,7 @@ set expandtab
 
 " Enable folding | Permite recoger código para una mejor vista
 set foldmethod=indent
-set foldlevel=5
+set foldlevel=99
 
 " Highlight search results | Resalta los resultados de búsqueda
 set hlsearch
@@ -135,12 +136,17 @@ autocmd TermOpen * setlocal nonumber
 silent nnoremap <C-n> :NERDTreeToggle<CR>
 let  NERDTreeShowHidden=1
 
-" Habilitamos las fuentes de Powerline (de mis otros scripts) y la caché.
+" Disabling TS indentation from typescript-vim plugin | Desabilitamos
+" indentado de Typescript del plugin typescript-vim
+
+let g:typescript_indent_disable = 1
+
+" Powerline optimizations on fonts and cache | Habilitamos las fuentes de Powerline y cacheado rápido
 
 let g:airline_powerline_fonts = 1
 let g:airline_highlighting_cache = 1
 
-" Set the color scheme | Lugar definido para esquemas de colores custom
+" Set the color scheme for airline plugin | Ajustes color plugin airline
 
 let g:airline_theme='dark'
 
