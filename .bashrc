@@ -241,6 +241,12 @@ alias gaa='git add .' # Git Add All
 alias gcm='git commit -m' # Git Commit -m
 alias gpo='git push origin' # Git Push Origin
 
+_gpo_completion() {
+    __gitcomp_direct "origin"
+}
+complete -F _gpo_completion gpo
+
+
 #-------------------------------------------------------------#
 
 #--- ARCHIVE EXTRACTOR - EXTRACTOR DE ARCHIVOS COMPRIMIDOS ---#
