@@ -1,5 +1,10 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
+
 #Mr Sandman's PopOS .bashrc - haha bash go brrrrr :)
+
+# Aquí empieza la zona recomendada por defecto | Default .bashrc stuff (base things) 
+
+#------------ DEFAULT CONFIG | CONFIG POR DEFECTO ------------#
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -106,66 +111,155 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Mis propios alias - My own aliases:
+#-------------------------------------------------------------#
+#                                                             #     
+#      CUSTOM CONFIG : ALIASES, KEYBINDS, PROMPTS, ETC.       #
+#                                                             #
+#-------------------------------------------------------------#
+
+#------------------------- EXPORTS ---------------------------#
+
+export BROWSER="firefox"
+export EDITOR="vim"
+export MAINED="nvim"
+export VIMRC="$HOME/.vimrc"
+export BASHRC="$HOME/.bashrc"
+export VISUAL="vim"
+
+#------------ MIS PROPIOS ALIAS - MY OWN ALIASES ------------#
+
+# 1.- File management | Gestión archivos
+
+alias infuse='chmod u+x'
+alias tree-size='tree -s -h --du'
+alias ttrunk='tree -a -C'
+
+# 2.- Program shorthands | Atajos cortos a programas
 
 alias afk='watch -n 1 neofetch --stdout | lolcat'
-alias alib='alias | more -n 6'
 alias bt='bashtop'
-alias bonk='exit'
-alias boop='sudo systemctl restart'
-alias bup="source ~/.bashrc && echo 'El .bashrc se actualizó con éxito'"
-alias cat!='sudo cat'
-alias cl='clear'
-alias cls='clear;ls -lh'
-alias did="history | grep"
 alias empty-can='trash-empty'
-alias flip='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove && sudo apt autoclean'
 alias fsh='flameshot >/dev/null 2>&1 &! disown'
-alias gensecpass="head -c 32 /dev/random | base64 | sed "s:[+=/]::g" | head -c 32"
-alias infuse='chmod +x'
 alias lebron-james='trash-put'
 alias list-can='trash-list'
 alias lol='toilet --gay lol'
-alias mygit-clone='cd /home/mrsandman/git-clone-zone && git clone https://github.com/mrs4ndman/base.git && git clone https://github.com/mrs4ndman/setup.git'
-alias myip='curl ipinfo.io/ip'
-alias meminfo='free -html'
-
-alias missile='sudo find / -name 2>/dev/null' 
-#The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting where it is from where it isn't, or where it isn't from where it is (whichever is greater), it obtains a difference, or deviation. The guidance subsystem uses deviations to generate corrective commands to drive the missile from a position where it is to a position where it isn't, and arriving at a position where it wasn't, it now is. Consequently, the position where it is, is now the position that it wasn't, and it follows that the position that it was, is now the position that it isn't.
-#In the event that the position that it is in is not the position that it wasn't, the system has acquired a variation, the variation being the difference between where the missile is, and where it wasn't. If variation is considered to be a significant factor, it too may be corrected by the GEA. However, the missile must also know where it was.
-#The missile guidance computer scenario works as follows. Because a variation has modified some of the information the missile has obtained, it is not sure just where it is. However, it is sure where it isn't, within reason, and it knows where it was. It now subtracts where it should be from where it wasn't, or vice-versa, and by differentiating this from the algebraic sum of where it shouldn't be, and where it was, it is able to obtain the deviation and its variation, which is called error.
-
-#Missile copy-pasta: Modern day memes hidden in plain sight
-
-alias need='sudo apt search'
-alias temps='psensor'
+alias slay='toilet --gay'
+alias temps='psensor 2>&1'
 alias nft='neofetch'
 alias nv='nvim'
-alias nvrc='nvim .config/nvim/init.vim'
 alias nyan='nyancat -n'
-alias ports='sudo lsof -l -P -n | grep LISTEN'
 alias powershell='pwsh'
 alias powsh='pwsh'
+alias rg='ranger'
+alias rge='alacritty -e ranger'
+alias svim='sudoedit'
+alias srg='sudo ranger'
+alias tr='trash-put'
+alias trr='trash-restore'
+
+# 3.- Config shorcuts | Atajos a archivos de configuración
+
+alias bup="source ~/.bashrc && echo 'Sourced .bashrc OK - .bashrc recargado OK'"
+alias nvrc='nvim .config/nvim/init.vim'
+alias vimbash='vim ~/.bashrc'
+alias vrc='vim ~/.vimrc'
+alias gch='cd ~/Gitchub'
+alias dwn='cd ~/Descargas'
+alias dtop='cd ~/Escritorio'
+
+# 4.- In-shell program option shortcuts | Atajos a funciones concretas de programas de shell
+
+alias alib='alias | more -n 6'
+alias bonk='exit'
+alias boop='sudo systemctl restart'
+alias cat!='sudo cat'
+alias cl='clear'
+alias cls='clear;ls -lh'
+alias debinst='sudo apt install'
+alias gib='sudo apt install'
+alias meminfo='free -html'
+alias need='sudo apt search'
 alias servlist='sudo service --status-all'
-alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' #RAMDISK temporal que se va con apagado
 alias sreload='sudo systemctl reload'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
-alias svim='sudo vi'
-alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lspci; cat /proc/version; diskusage; df -hl -x squashfs; temp; nft'
-alias tree-size='tree -s -h --du'
-alias tree-x='tree -I'
-alias ttrunk='tree -a -C'
 alias untar='tar xvf'
-alias vimbash='vim ~/.bashrc'
-alias vm-list='sudo find / -name *.qcow2 2>/dev/null'
-alias vrc='vim ~/.vimrc'
-alias vls="watch -n 0.1 ls -l"
+alias vm-list='sudo find / -name *.qcow2 -a -name *.vdi 2>/dev/null'
+alias vls='watch -n 0.1 ls -la'
 alias whack='sudo systemctl restart'
+alias where='echo "The good one:"; which; echo "Where you can find it:"; whereis'
 alias wut='whatis'
 
+# 4.1.- ---------------- SHELL CHANGER -----------------------#
+# 
+# Uncomment the aliases this if you swap shells / are trying shells frequently
+# Descomentar los alias si cambias entre / pruebas varias shells regularmente
+# 
+# Set bash:
+#alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out - Ahora haz logout'"
+# Set zsh:
+#alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out - Ahora haz logout'"
+# Set fish:
+#alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out - Ahora haz logout'"
+# Set sh:
+#alias tosh="chsh $USER -s /bin/sh && echo 'Now log out - Ahora haz logout'"
 
-# Autocompletación
+# 5.- Aliases that call on multiple programs / functions
+
+alias did="history | grep"
+alias flip='sudo apt update -y && sudo apt upgrade && sudo apt autoremove && sudo apt clean'
+alias font-search='fc-list | grep'
+
+alias gensecpass="head -c 32 /dev/random | base64 | sed "s:[+=/]::g" | head -c 32"
+# This is a bashism, gensecpass ONLY WORKS ON BASH - gensecpass SOLO FUNCIONA EN BASH;
+# Will find a way to make it cross-shell compatible
+
+alias mygit-clone='cd /home/mrsandman/git-clone-zone && git clone https://github.com/mrs4ndman/base.git && git clone https://github.com/mrs4ndman/setup.git'
+alias myip='curl ipinfo.io/ip'
+
+alias missile='sudo find / -name 2>/dev/null' 
+#   The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting where it is from where it isn't, or where it isn't from where it is (whichever is greater), it obtains a difference, or deviation. The guidance subsystem uses deviations to generate corrective commands to drive the missile from a position where it is to a position where it isn't, and arriving at a position where it wasn't, it now is. Consequently, the position where it is, is now the position that it wasn't, and it follows that the position that it was, is now the position that it isn't.
+#   In the event that the position that it is in is not the position that it wasn't, the system has acquired a variation, the variation being the difference between where the missile is, and where it wasn't. If variation is considered to be a significant factor, it too may be corrected by the GEA. However, the missile must also know where it was.
+#   The missile guidance computer scenario works as follows. Because a variation has modified some of the information the missile has obtained, it is not sure just where it is. However, it is sure where it isn't, within reason, and it knows where it was. It now subtracts where it should be from where it wasn't, or vice-versa, and by differentiating this from the algebraic sum of where it shouldn't be, and where it was, it is able to obtain the deviation and its variation, which is called error.
+
+#   Missile copy-pasta: Modern day memes hidden in plain sight
+
+alias ports='sudo lsof -l -P -n | grep LISTEN'
+alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' # Temporal RAMDISK that goes away on shutdown | RAMDISK temporal que se va con apagado del sistema #
+alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lscpi; diskusage; df -hl -x squashfs; temp; nft'
+
+#-------------------------------------------------------------#
+
+#--- ARCHIVE EXTRACTOR - EXTRACTOR DE ARCHIVOS COMPRIMIDOS ---#
+#--- Requires the following packages - Requiere los siguiente paquetes:
+# bzip2 tar rar unrar gzip zip unzip ncompress p7zip-full ar zstd xz-utils #
+
+ex ()
+{
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)  tar xjf $1  ;;
+            *.tar.gz)   tar xzf $1  ;;
+            *.bz2)      bunzip2 $1  ;;
+            *.rar)      unrar x $1  ;;
+            *.gz)       gunzip $1   ;;
+            *.tar)      tar xf $1   ;;
+            *.tbz2)     tar xjf $1  ;;
+            *.tgz)      tar xzf $1  ;;
+            *.zip)      unzip $1    ;;
+            *.Z)        uncompress $1;;
+            *.7z)       7za e x $1  ;;
+            *.deb)      ar x $1     ;;
+            *.tar.xz)   tar xf $1   ;;
+            *.tar.zst)  unzstd $1   ;;
+            *)          echo "'$1' could not be extracted with ex() - No se ha podido extraer con ex" ;;
+        esac
+    else
+        echo "'$1' is not a valid file - '$1' no es un tipo de archivo válido"
+    fi
+}
+
+#------------- AUTOCOMPLETION - AUTOCOMPLETACIÓN -------------#
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -176,6 +270,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#------------- PLUGIN AND ALIAS LOADING SCRIPTS --------------#
 
 eval $(thefuck --alias)
 
