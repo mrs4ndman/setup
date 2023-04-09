@@ -1,11 +1,11 @@
 # SETUP
-## The setup I use on every terminal I use regularly | Mi setup para terminales que uso de manera regular
+## The setup I use regularly | Mi setup que uso de manera regular
 ### Van acompañados de los [scripts](https://github.com/mrs4ndman/base/tree/main/scripts) del otro [repositorio](https://github.com/mrs4ndman/base)
 
-- **.config** : Contiene las configuraciones (y backups / defaults correspondientes) de Neovim, Alacritty y Neofetch. | Contains the configs (and backups / defaults) for Neovim, Alacritty and Neofetch.
-- **.bashrc** : Mi bashrc (principalmente alias custom) | Mainly custom alias
-- **.vimrc** : VIMrc general para hacerlo más agradable, pero no un editor (para eso NVIM) | Simple .vimrc conf editor file
-- rc-font-conf.sh : Ayuda a configurar mi setup de nuevo | Setup script for the repo
+- **[.config](https://github.com/mrs4ndman/setup/tree/master/.config)** : Directorio con las configuraciones (y backups / defaults correspondientes) de Neovim, Alacritty y Neofetch. | Folder with the configs (and backups / defaults) for Neovim, Alacritty and Neofetch.
+- **[.bashrc](https://github.com/mrs4ndman/setup/blob/master/.bashrc)** : Mi bashrc (principalmente alias custom) | Mainly custom alias
+- **[.vimrc](https://github.com/mrs4ndman/setup/blob/master/.vimrc)** : .vimrc general para hacerlo más agradable, pero no un editor (para eso Neovim) | Simple .vimrc conf file (my main editor is Neovim)
+- **[rc-font-conf.sh](https://github.com/mrs4ndman/setup/blob/master/rc-font-conf.sh)** : Ayuda a configurar mi setup de nuevo | Setup script for the repo
 
 ### Abierto a sugerencias | Open to suggestions
 
