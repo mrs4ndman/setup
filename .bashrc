@@ -169,6 +169,7 @@ alias vrc='vim ~/.vimrc'
 alias gch='cd ~/Gitchub'
 alias dwn='cd ~/Descargas'
 alias dtop='cd ~/Escritorio'
+alias gch='cd ~/Gitchub'
 
 # 4.- In-shell program option shortcuts | Atajos a funciones concretas de programas de shell
 
