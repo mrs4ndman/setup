@@ -121,10 +121,11 @@ fi
 
 export BROWSER="firefox"
 export EDITOR="vim"
+export VISUAL="vim"
 export MAINED="nvim"
 export VIMRC="$HOME/.vimrc"
 export BASHRC="$HOME/.bashrc"
-export VISUAL="vim"
+
 
 #------------ MIS PROPIOS ALIAS - MY OWN ALIASES ------------#
 
@@ -132,7 +133,7 @@ export VISUAL="vim"
 
 alias infuse='chmod u+x'
 alias tree-size='tree -s -h --du'
-alias ttrunk='tree -a -C'
+alias trunk='tree -a -C'
 
 # 2.- Program shorthands | Atajos cortos a programas
 
@@ -145,6 +146,8 @@ alias list-can='trash-list'
 alias lol='toilet --gay lol'
 alias slay='toilet --gay'
 alias temps='psensor 2>&1'
+alias minifetch='neofetch --config ~/.config/neofetch/minifetch.conf'
+alias mft='minifetch'
 alias nft='neofetch'
 alias nv='nvim'
 alias nyan='nyancat -n'
@@ -190,6 +193,7 @@ alias whack='sudo systemctl restart'
 alias where='echo "The good one:"; which; echo "Where you can find it:"; whereis'
 alias wut='whatis'
 
+
 # 4.1.- ---------------- SHELL CHANGER -----------------------#
 # 
 # Uncomment the aliases this if you swap shells / are trying shells frequently
@@ -203,6 +207,7 @@ alias wut='whatis'
 #alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out - Ahora haz logout'"
 # Set sh:
 #alias tosh="chsh $USER -s /bin/sh && echo 'Now log out - Ahora haz logout'"
+
 
 # 5.- Aliases that call on multiple programs / functions
 
@@ -229,6 +234,7 @@ alias speedy='sudo mount -t tmpfs -o size=1024M tmpfs /media/rammy' # Temporal R
 alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lscpi; diskusage; df -hl -x squashfs; temp; nft'
 
 #-------------------------------------------------------------#
+
 
 #--- ARCHIVE EXTRACTOR - EXTRACTOR DE ARCHIVOS COMPRIMIDOS ---#
 #--- Requires the following packages - Requiere los siguiente paquetes:
@@ -259,6 +265,7 @@ ex ()
     fi
 }
 
+
 #------------- AUTOCOMPLETION - AUTOCOMPLETACIÓN -------------#
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -271,6 +278,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
 #------------- PLUGIN AND ALIAS LOADING SCRIPTS --------------#
 
 eval $(thefuck --alias)
@@ -281,4 +289,10 @@ if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
 	POWERLINE_BASH_SELECT=1
 	source /usr/share/powerline/bindings/bash/powerline.sh
 fi
+
+
+#------------- MINIFETCH ON TERMINAL WINDOW START ---------------#
+# Minifetch is an alias for my alternate neofetch config
+minifetch
+
 
