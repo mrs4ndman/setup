@@ -235,6 +235,13 @@ alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lscpi; diskusage; df -hl -x sq
 
 #-------------------------------------------------------------#
 
+#------------------------ GIT ALIAS ZONE ---------------------#
+
+alias gaa='git add .' # Git Add All
+alias gcm='git commit -m' # Git Commit -m
+alias gpo='git push origin' # Git Push Origin
+
+#-------------------------------------------------------------#
 
 #--- ARCHIVE EXTRACTOR - EXTRACTOR DE ARCHIVOS COMPRIMIDOS ---#
 #--- Requires the following packages - Requiere los siguiente paquetes:
