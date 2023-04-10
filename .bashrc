@@ -157,7 +157,7 @@ alias rg='ranger'
 alias rge='alacritty -e ranger'
 alias svim='sudoedit'
 alias srg='sudo ranger'
-alias tr='trash-put'
+alias trp='trash-put'
 alias trr='trash-restore'
 
 # 3.- Config shorcuts | Atajos a archivos de configuración
@@ -291,6 +291,7 @@ fi
 
 eval $(thefuck --alias)
 
+eval "$(starship init bash)"
 
 #------------- MINIFETCH ON TERMINAL WINDOW START ---------------#
 # Minifetch is an alias for my alternate neofetch config
