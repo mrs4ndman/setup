@@ -40,3 +40,9 @@
 #
 eval "$(starship init zsh)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Fuzzy Finder Integration
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTS='-m --height 40% --border'
+
