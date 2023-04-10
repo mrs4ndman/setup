@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'farmergreg/vim-lastplace'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 " Configuración cambio modo y línea de modos
