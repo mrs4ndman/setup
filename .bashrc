@@ -125,6 +125,7 @@ export VISUAL="vim"
 export MAINED="nvim"
 export VIMRC="$HOME/.vimrc"
 export BASHRC="$HOME/.bashrc"
+export PATH="/home/mrsandman/.cargo/bin:/home/mrsandman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 
 #------------ MIS PROPIOS ALIAS - MY OWN ALIASES ------------#
@@ -275,9 +276,11 @@ ex ()
 
 
 #------------- AUTOCOMPLETION - AUTOCOMPLETACIÓN -------------#
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
+
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -286,6 +289,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #------------- PLUGIN AND ALIAS LOADING SCRIPTS --------------#
 
