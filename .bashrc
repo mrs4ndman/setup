@@ -67,7 +67,6 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -147,7 +146,7 @@ alias list-can='trash-list'
 alias lol='toilet --gay lol'
 alias slay='toilet --gay'
 alias temps='psensor 2>&1'
-alias minifetch='neofetch --config ~/.config/neofetch/minifetch.conf'
+#alias minifetch='neofetch --config ~/.config/neofetch/minifetch.conf'
 alias mft='minifetch'
 alias nft='neofetch'
 alias nv='nvim'
@@ -293,12 +292,16 @@ fi
 
 #------------- PLUGIN AND ALIAS LOADING SCRIPTS --------------#
 
-eval $(thefuck --alias)
+if command -v thefuck >/dev/null 2>&1; then
+    eval $(thefuck --alias)
+fi
 
-eval "$(starship init bash)"
-
+ if command -v starship >/dev/null 2>&1; then
+     eval "$(starship init bash)"
+ fi
 #------------- MINIFETCH ON TERMINAL WINDOW START ---------------#
 # Minifetch is an alias for my alternate neofetch config
-minifetch
-
+if [[ "$(type -t minifetch)" == "minifetch" ]]; then
+    minifetch
+fi
 
