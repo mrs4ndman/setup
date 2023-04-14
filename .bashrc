@@ -114,6 +114,8 @@ fi
 #                                                             #     
 #      CUSTOM CONFIG : ALIASES, KEYBINDS, PROMPTS, ETC.       #
 #                                                             #
+#               https://github.com/mrs4ndman                  #
+#                                                             #
 #-------------------------------------------------------------#
 
 #------------------------- EXPORTS ---------------------------#
@@ -146,14 +148,13 @@ alias list-can='trash-list'
 alias lol='toilet --gay lol'
 alias slay='toilet --gay'
 alias temps='psensor 2>&1'
-#alias minifetch='neofetch --config ~/.config/neofetch/minifetch.conf'
+alias minifetch='neofetch --config ~/.config/neofetch/minifetch.conf'
 alias mft='minifetch'
 alias nft='neofetch'
 alias nv='nvim'
 alias nyan='nyancat -n'
 alias powershell='pwsh'
 alias powsh='pwsh'
-alias rg='ranger'
 alias rge='alacritty -e ranger'
 alias svim='sudoedit'
 alias srg='sudo ranger'
@@ -185,6 +186,7 @@ alias meminfo='free -html'
 alias need='sudo apt search'
 alias servlist='sudo service --status-all'
 alias sreload='sudo systemctl reload'
+alias sshrepub='echo "Path to private >> path to recovered public"; sleep 1; ssh-keygen -y -f'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
 alias untar='tar xvf'
