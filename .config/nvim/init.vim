@@ -16,7 +16,7 @@ Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install'} 
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-python/python-syntax'
@@ -24,6 +24,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-commentary'
+Plug 'ThePrimeagen/vim-be-good'
 call plug#end()
 
 " Configuración cambio modo y línea de modos
