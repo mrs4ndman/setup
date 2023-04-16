@@ -13,6 +13,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'farmergreg/vim-lastplace'
 Plug 'preservim/nerdtree'
+Plug 'kevinhwang91/rnvimr'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
@@ -77,6 +79,7 @@ autocmd TermOpen * setlocal nonumber
 
 " NERDTree config (keyboard shortcuts and UI) | Configuración NERDTree (keybinds y UI)
 
+nnoremap <silent> <M-r> :RnvimrToggle<CR>
 silent nnoremap <C-n> :NERDTreeToggle<CR>
 let  NERDTreeShowHidden=1
 
