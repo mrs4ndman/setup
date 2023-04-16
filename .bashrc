@@ -240,15 +240,17 @@ alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lscpi; diskusage; df -hl -x sq
 
 #------------------------ GIT ALIAS ZONE ---------------------#
 
-alias gaa='git add .' # Git Add All
-alias gcm='git commit -m' # Git Commit -m
+alias gaa='git add .'
+alias gcm='git commit -m'
+alias gcl='git clean' 
 alias gco='git checkout'
-alias gpo='git push origin' # Git Push Origin
-alias gst='git status'
-#alias nextalias='2'
-alias gcl='git clean'
+alias gib='git init -b'
 alias gin='git init'
-alias gib='git init -b' 
+alias gpo='git push origin'
+alias gst='git status'
+
+alias yeet='git push'
+alias yoink='git pull'
 
 #-------------------------------------------------------------#
 
