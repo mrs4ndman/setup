@@ -75,5 +75,5 @@ let g:airline_powerline_fonts = 1
 
 " Set the color scheme | Lugar definido para esquemas de colores custom
 
-let g:airline_theme='dark'
+let g:airline_theme='onedark'
 
