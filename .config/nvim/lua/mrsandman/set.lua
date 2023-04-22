@@ -31,4 +31,11 @@ vim.opt.updatetime = 50
 -- Color columns
 vim.opt.colorcolumn = "90"
 
-vim.g.mapleader = " "
+-- Enable airline
+vim.g.airline_enabled = 1
+
+-- Use a specific theme
+vim.g.airline_theme = 'minimalist'
+
+-- Set nvim timeout
+vim.opt.timeoutlen = 1000

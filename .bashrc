@@ -121,12 +121,12 @@ fi
 #------------------------- EXPORTS ---------------------------#
 
 export BROWSER="firefox"
-export EDITOR="vim"
-export VISUAL="vim"
-export MAINED="nvim"
-export VIMRC="$HOME/.vimrc"
 export BASHRC="$HOME/.bashrc"
+export EDITOR="vim"
+export MAINED="nvim"
 export PATH="/home/mrsandman/.cargo/bin:/home/mrsandman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export VIMRC="$HOME/.vimrc"
+export VISUAL="vim"
 
 
 #------------ MIS PROPIOS ALIAS - MY OWN ALIASES ------------#
@@ -164,13 +164,13 @@ alias trr='trash-restore'
 # 3.- Config shorcuts | Atajos a archivos de configuración
 
 alias bup="source ~/.bashrc && echo 'Sourced .bashrc OK - .bashrc recargado OK'"
-alias nvrc='nvim .config/nvim/init.vim'
-alias vimbash='vim ~/.bashrc'
-alias vrc='vim ~/.vimrc'
-alias gch='cd ~/Gitchub'
 alias dwn='cd ~/Descargas'
 alias dtop='cd ~/Escritorio'
 alias gch='cd ~/Gitchub'
+alias gch='cd ~/Gitchub'
+alias nvrc='nvim .config/nvim/'
+alias vimbash='vim ~/.bashrc'
+alias vrc='vim ~/.vimrc'
 
 # 4.- In-shell program option shortcuts | Atajos a funciones concretas de programas de shell
 
@@ -248,6 +248,7 @@ alias gib='git init -b'
 alias gin='git init'
 alias gpo='git push origin'
 alias gst='git status'
+alias gd='git diff'
 
 alias yeet='git push'
 alias yoink='git pull'
