@@ -34,8 +34,8 @@ vim.keymap.set("n", "<C-q>", ":q!<CR>")
 vim.keymap.set("n", "<C-w>", ":w<CR>")
 
 -- Half-page jumping
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
 
 
 
@@ -61,8 +61,8 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- VISUAL mode Keybinds
 
 -- Moving around text on visual
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
 -- Sessionizer (to be configured)
 -- vim.keymap.set("n", "C-f", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
