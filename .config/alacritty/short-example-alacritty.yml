@@ -59,8 +59,8 @@ scrolling:
 # The key mappings for various functions
 # (example: Ctrl + Shift + C to copy)
 mappings:
-  - { key: C, mods: Control, action: Copy }
-  - { key: V, mods: Control, action: Paste }
-  - { key: F11, action: ToggleFullScreen }
+  - { key: C,        mods: Control, action: Copy }
+  - { key: V,        mods: Control, action: Paste }
+  - { key: F12,                     action: ToggleFullScreen }
 
 
