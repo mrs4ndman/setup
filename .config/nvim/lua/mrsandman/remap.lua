@@ -6,12 +6,12 @@
 vim.g.mapleader = " "
 
 -- LEADER Keybinds (Space for this config)
+-- 
 -- Netrw start / Change to ranger
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 -- RNVIMR toggle
 vim.keymap.set("n", "<leader>r", ':RnvimrToggle<CR>', ( { silent = true, noremap = true} ))
-
 
 -- Substitutor for current word:
 vim.keymap.set("n", "<leader>s",[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -26,6 +26,11 @@ end)
 
 -- greatest remap ever,  replace current selection with paste buffer
 vim.keymap.set("x", "<leader>p", "\"_dP")
+
+-- Buffer previous and next
+vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
+
 
 
 -- CTRL Keybinds

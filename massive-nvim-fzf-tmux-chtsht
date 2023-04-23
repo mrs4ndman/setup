@@ -1,0 +1,39 @@
+NVIM:
+
+(assuming Space is leader)
+
+Leader + Leader = Source current file
+Leader + Q = Nothing
+Leader + W = Nothing
+Leader + E = Ex (Nvim Integrated Explorer)
+Leader + R = Ranger with rnvimr plugin inside Nvim
+Leader + T = Nothing
+Leader + Y = Nothing
+Leader + U = Undotree plugin (pops window on left side) 
+Leader + I = Nothing
+Leader + O = Nothing
+Leader + P = Base binding for ---
+Leader + P + T = Telescope plugin
+Leader + P + G = Live grep the file, telescope plugin
+Leader + A = Harpoon mark keybind 
+Leader + S = Substitutor for current word
+Leader + D = Nothing
+Leader + F = Nothing
+Leader + G = Nothing
+Leader + H = Harpoon main screen / Plugin
+Leader + J = Nothing
+Leader + K = Nothing
+Leader + L = Nothing
+Leader + Ñ (or whatever is here in english) = Nothing
+Leader + Z = Nothing
+Leader + X = Nothing
+Leader + C = Nothing
+Leader + V = Nothing
+Leader + B = Base binding for ----
+Leader + B + N = Next buffer
+Leader + B + P = Previous buffer
+Leader + N + 
+
+
+Leader + X = Make the current file executable (chmod +x)
+
