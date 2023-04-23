@@ -127,7 +127,7 @@ export MAINED="nvim"
 export PATH="/home/mrsandman/.cargo/bin:/home/mrsandman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export VIMRC="$HOME/.vimrc"
 export VISUAL="vim"
-
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
 #------------ MIS PROPIOS ALIAS - MY OWN ALIASES ------------#
 

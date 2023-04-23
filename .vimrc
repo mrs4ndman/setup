@@ -18,6 +18,9 @@ call plug#end()
 set ttimeoutlen=10
 set noshowmode
 
+" Netrw config | Configuración de netrw
+let g:netrw_list_mode=1
+
 " Encoding | Codificación
 
 set encoding=UTF-8
