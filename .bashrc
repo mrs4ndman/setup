@@ -128,7 +128,6 @@ export MAINED="nvim"
 export PATH="/home/mrsandman/.cargo/bin:/home/mrsandman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export VIMRC="$HOME/.vimrc"
 export VISUAL="vim"
-export TERM=alacritty
 
 #------------ MIS PROPIOS ALIAS - MY OWN ALIASES ------------#
 
@@ -141,6 +140,7 @@ alias trunk='tree -a -C'
 # 2.- Program shorthands | Atajos cortos a programas
 
 alias afk='watch -n 1 neofetch --stdout | lolcat'
+alias bc='batcat'
 alias bt='bashtop'
 alias empty-can='trash-empty'
 alias fsh='flameshot >/dev/null 2>&1 &! disown'
