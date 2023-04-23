@@ -124,6 +124,7 @@ export BROWSER="firefox"
 export BASHRC="$HOME/.bashrc"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
+export FZF_DEFAULT_OPTS='-m --height 40% --border'
 export MAINED="nvim"
 export PATH="/home/mrsandman/.cargo/bin:/home/mrsandman/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export VIMRC="$HOME/.vimrc"
@@ -218,6 +219,7 @@ alias wut='whatis'
 alias did="history | grep"
 alias flip='sudo apt update -y && sudo apt upgrade && sudo apt autoremove && sudo apt clean'
 alias font-search='fc-list | grep'
+alias fv='nvim -o `fzf`'
 
 alias gensecpass="head -c 32 /dev/random | base64 | sed "s:[+=/]::g" | head -c 32"
 # This is a bashism, gensecpass ONLY WORKS ON BASH - gensecpass SOLO FUNCIONA EN BASH;
