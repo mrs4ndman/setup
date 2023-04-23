@@ -28,7 +28,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- greatest remap ever,  replace current selection with paste buffer
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
--- How to escape Vim Visual mode: keybind edition:
+-- How to escape Vim Insert mode: keybind edition:
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- No-do

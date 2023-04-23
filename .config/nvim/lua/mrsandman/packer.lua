@@ -17,8 +17,26 @@ return require('packer').startup(function(use)
 	requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Load Telescope
+require('telescope').setup{
+  defaults = {
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+      '-uu' -- **This is the setting not being respected**
+    }
+  }
+}
+
+
 -- Theme plugin config
-  use({ 'rose-pine/neovim', as = 'rose-pine',
+  use({ 'rose-pine/neovim',
+  as = 'rose-pine',
   config = function()
 	  vim.cmd('colorscheme rose-pine')
   end
@@ -29,6 +47,7 @@ return require('packer').startup(function(use)
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use ('nvim-treesitter/playground')
 use ('christoomey/vim-tmux-navigator')
+use ('junegunn/fzf')
 use ('ThePrimeagen/vim-be-good')
 use ('ThePrimeagen/harpoon')
 use ('mbbill/undotree')
@@ -36,7 +55,6 @@ use ('tpope/vim-fugitive')
 use {'vim-airline/vim-airline', requires = {'vim-airline/vim-airline-themes'}}
 use ('farmergreg/vim-lastplace')
 use ('ap/vim-css-color')
-use ('ryanoasis/vim-devicons')
 use {
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
@@ -92,6 +110,10 @@ use {
 	{'L3MON4D3/LuaSnip'},     -- Required
 }
 }
+
+use("folke/zen-mode.nvim")
+
+use ('ryanoasis/vim-devicons')
 end)
 
 
