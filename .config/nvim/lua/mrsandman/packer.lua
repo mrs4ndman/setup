@@ -9,7 +9,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
--- Telescope config
+-- MAIN PLUGIN CONFIG
+-- INCLUDES LSP BASE CONFIG, TMUX CONFIG, AUTOPAIRS, 
+-- 1.- Telescope config
 
   use {
 	'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -17,24 +19,25 @@ return require('packer').startup(function(use)
 	requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- Load Telescope
-require('telescope').setup{
-  defaults = {
-    vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
-      '-uu' -- **This is the setting not being respected**
-    }
-  }
-}
+-- 2.- Load Telescope
+--
+-- require('telescope').setup{
+--  defaults = {
+--    vimgrep_arguments = {
+--      'rg',
+--      '--color=never',
+--      '--no-heading',
+--      '--with-filename',
+--      '--line-number',
+--      '--column',
+--      '--smart-case',
+--      '-uu' -- **This is the setting not being respected**
+--    }
+--  }
+--}
 
 
--- Theme plugin config
+-- 3.- Theme plugin config
   use({ 'rose-pine/neovim',
   as = 'rose-pine',
   config = function()
@@ -42,19 +45,28 @@ require('telescope').setup{
   end
 })
 
--- MAIN PLUGIN CONFIG
--- INCLUDES LSP BASE CONFIG, TMUX CONFIG, AUTOPAIRS, 
+-- 4.- Treesitter modules
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use ('nvim-treesitter/playground')
+
+-- 5.- External integration: Git, tmux, ranger & fzf, also remembers where I was in the buffer
 use ('christoomey/vim-tmux-navigator')
 use ('junegunn/fzf')
+use ('tpope/vim-fugitive')
+use ('farmergreg/vim-lastplace')
+use ('kevinhwang91/rnvimr')
+
+
+-- 6.- ThePrimeagen plugins (Blazingly Fast)
 use ('ThePrimeagen/vim-be-good')
 use ('ThePrimeagen/harpoon')
 use ('mbbill/undotree')
-use ('tpope/vim-fugitive')
+
+-- 7.- UI customization
 use {'vim-airline/vim-airline', requires = {'vim-airline/vim-airline-themes'}}
-use ('farmergreg/vim-lastplace')
 use ('ap/vim-css-color')
+
+-- 8.- Autopairs & tabout for tabbing out of said pairs
 use {
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
@@ -89,7 +101,7 @@ use {
 	after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
 }
 
--- LSP Conf
+-- 9.- LSP Configuration
 use {
 	'VonHeikemen/lsp-zero.nvim',
 	branch = 'v2.x',
@@ -111,8 +123,16 @@ use {
 }
 }
 
+
+-- 10.- Zen mode with Space + zz / zZ
 use("folke/zen-mode.nvim")
 
+
+-- 11.- Plugin testing zone 
+-- INSERT PLUGIN HERE --
+
+
+-- 1X.- Devicons for rnvimr & telescope 
 use ('ryanoasis/vim-devicons')
 end)
 

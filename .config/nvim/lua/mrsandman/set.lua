@@ -52,3 +52,15 @@ vim.g.airline_powerline_fonts = 1
 -- Use a specific theme
 vim.g.airline_theme = 'minimalist'
 
+-- rnvimr config
+vim.g.rnvimr_ex_enable = 1
+vim.g.rnvimr_enable_bw = 1
+vim.g.rnvimr_enable_picker = 1
+vim.g.rnvimr_bw_enable = 1
+vim.g.rnvimr_bw_restore_screen_on_close = 1
+vim.g.rnvimr_draw_border = 1
+vim.g.rnvimr_pick_enable = 1
+vim.g.rnvimr_pick_create = 0
+
+
+
