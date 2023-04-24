@@ -10,11 +10,22 @@ end)
 
 telescope.setup {
     defaults = {
-        prompt_position = 'top',
-        layout_strategy = 'horizontal',
+        sort_mru = true,
         sorting_strategy = 'ascending',
-        use_less = false,
-      -- find_command = {'fd', '--hidden', '--no-ignore', '--type', 'f'}
+        layout_config = {
+            prompt_position = 'top'
+        },
+        borderchars = {
+            prompt = border_chars_none,
+            results = border_chars_none,
+            preview = border_chars_none
+        },
+        border = true,
+        prompt_prefix = '   ',
+        hl_result_eol = true,
+        results_title = "",
+        winblend = 0,
+        wrap_results = true
     }
 }
 

@@ -16,7 +16,10 @@ return require('packer').startup(function(use)
   use {
 	'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	-- or                            , branch = '0.1.x',
-	requires = { {'nvim-lua/plenary.nvim'} }
+	requires = {
+        'nvim-lua/popup.nvim',
+        'nvim-lua/plenary.nvim',
+    }
   }
 
 -- 2.- Load Telescope
@@ -53,6 +56,12 @@ use ('nvim-treesitter/playground')
 use ('christoomey/vim-tmux-navigator')
 use ('junegunn/fzf')
 use ('tpope/vim-fugitive')
+use ('tpope/vim-commentary')
+  -- Git signs on the gutter
+use ('lewis6991/gitsigns.nvim')
+
+
+
 use ('farmergreg/vim-lastplace')
 use ('kevinhwang91/rnvimr')
 
@@ -63,8 +72,9 @@ use ('ThePrimeagen/harpoon')
 use ('mbbill/undotree')
 
 -- 7.- UI customization
-use {'vim-airline/vim-airline', requires = {'vim-airline/vim-airline-themes'}}
+use {'vim-airline/vim-airline', requires = { 'vim-airline/vim-airline-themes' } }
 use ('ap/vim-css-color')
+use 'nvim-tree/nvim-web-devicons'
 
 -- 8.- Autopairs & tabout for tabbing out of said pairs
 use {
@@ -128,8 +138,11 @@ use {
 use("folke/zen-mode.nvim")
 
 
--- 11.- Plugin testing zone 
--- INSERT PLUGIN HERE --
+-- 11.- 
+
+
+
+
 
 
 -- 1X.- Devicons for rnvimr & telescope 

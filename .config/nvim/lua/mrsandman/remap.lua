@@ -32,7 +32,6 @@ vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true 
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
 
 
-
 -- CTRL Keybinds
 -- Quitting and saving exit
 vim.keymap.set("n", "<C-q>", ":q!<CR>")

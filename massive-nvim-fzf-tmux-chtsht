@@ -26,6 +26,8 @@ Leader + K = Nothing
 Leader + L = Nothing
 Leader + Ñ (or whatever is here in english) = Nothing
 Leader + Z = Nothing
+Leader + zz = Zen mode
+Leader + zZ = Zenmode without numbers and wrap
 Leader + X = Nothing
 Leader + C = Nothing
 Leader + V = Nothing
@@ -33,6 +35,9 @@ Leader + B = Base binding for ----
 Leader + B + N = Next buffer
 Leader + B + P = Previous buffer
 Leader + N + 
+Leader + M = Nothing
+
+
 
 
 Leader + X = Make the current file executable (chmod +x)
