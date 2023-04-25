@@ -1,44 +1,113 @@
-NVIM:
+NVIM: Custom keybinds with space
 
 (assuming Space is leader)
 
 Leader + Leader = Source current file
+Leader + e = Ex (Nvim Integrated Explorer)
+Leader + r = Ranger with rnvimr plugin inside Nvim
+Leader + u = Undotree plugin (pops window on left side) 
+Leader + p = Base binding for ---
+Leader + p + t = Telescope plugin
+Leader + p + g = Live grep the file, telescope plugin
+Leader + h = Harpoon main screen / Plugin
+Leader + a = Harpoon mark keybind 
+Leader + s = Substitutor for current word
+Leader + zz = Zen mode
+Leader + zZ = Zen mode without numbers and wrap
+Leader + x = Make the current file executable (chmod +x)
+Leader + b = Base binding for ----
+Leader + b + n = Next buffer
+Leader + b + p = Previous buffer
+
+
 Leader + Q = Nothing
 Leader + W = Nothing
-Leader + E = Ex (Nvim Integrated Explorer)
-Leader + R = Ranger with rnvimr plugin inside Nvim
 Leader + T = Nothing
 Leader + Y = Nothing
-Leader + U = Undotree plugin (pops window on left side) 
 Leader + I = Nothing
 Leader + O = Nothing
-Leader + P = Base binding for ---
-Leader + P + T = Telescope plugin
-Leader + P + G = Live grep the file, telescope plugin
-Leader + A = Harpoon mark keybind 
-Leader + S = Substitutor for current word
 Leader + D = Nothing
 Leader + F = Nothing
 Leader + G = Nothing
-Leader + H = Harpoon main screen / Plugin
 Leader + J = Nothing
 Leader + K = Nothing
 Leader + L = Nothing
 Leader + Ñ (or whatever is here in english) = Nothing
 Leader + Z = Nothing
-Leader + zz = Zen mode
-Leader + zZ = Zenmode without numbers and wrap
 Leader + X = Nothing
 Leader + C = Nothing
 Leader + V = Nothing
-Leader + B = Base binding for ----
-Leader + B + N = Next buffer
-Leader + B + P = Previous buffer
-Leader + N + 
-Leader + M = Nothing
+Leader + N  
+Leader + M
 
 
 
 
-Leader + X = Make the current file executable (chmod +x)
+
+TMUX: Default keybinds
+
+(assuming Ctrl + s as prefix / leader)
+
+Leader + ? = List all key bindings
+
+
+
+-- Most used
+
+-- Layouts:
+Leader + ( Alt + 1 ) = Even-horizontal layout
+Leader + ( Alt + 2 ) = Even-vertical layout
+Leader + ( Alt + 3 ) = Main horizontal layout
+Leader + ( Alt + 4 ) = Main vertical layout
+Leader + ( Alt + 5 ) = Tiled layout
+
+Leader + ( Ctrl + Up / Down / Left / Right ) = Resize the current pane in 1-cell steps
+Leader + ( Alt + Up / Down / Left / Right ) = Resize the current pane in 5-cell steps
+
+
+-- Panes:
+Leader + [Ctrl + o] = Rotates the panes in the current window forwards 
+Leader + q = Identify panes with numbers & show their indexes
+Leader + % = Horizontally splits the current pane into left and right panes
+Leader + " = Vertically splits the current pane into top and bottom panes
+Leader + x = Kills the current pane
+Leader + o = Select the next pane in the current window
+Leader + ; = Move to the previously active pane
+Leader + { / } = Swaps the current pane with the previous / next one
+Leader + m / M = Mark current pane / Clear the marked pane
+
+
+-- Windows:
+Leader + c = Create a new window
+Leader + p = Previous window
+Leader + n = Next window
+Leader + [ 0 - 9 ] = Select windows 0 to 9
+Leader + w = Opens window / pane selector dropdown menu
+Leader + ! = Breaks into another window the current pane
+Leader + & = Kill the current window
+Leader + i = Current window info
+Leader + f = Text search in open windows
+
+
+-- Config & features
+Leader + [Ctrl + s] = Sends prefix to the application
+Leader + t = CLI-rendered clock
+Leader + z = Toggles zoom / focus mode
+Leader + r = Reload tmux.conf
+Leader + : = Enter the tmux command prompt
+Leader + [Ctrl + z] = Suspends the tmux client
+
+
+-- Sessions & clients
+Leader + $ = Rename the current session
+Leader + d / D = Detach the current client / Choose a client to detach
+Leader + s = Select a new session for the attached client interactively
+Leader + ( / ) = Switch the attached client to the previous or next session
+
+
+-- Paste buffers
+Leader + # = List all paste buffers
+Leader + "=" = Choose which buffer to paste interactively from a list 
+Leader + - = Delete the most recent copied buffer of text
+
 
