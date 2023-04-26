@@ -10,17 +10,41 @@ end)
 
 telescope.setup {
     defaults = {
+        preview = {
+            timeout = 500,
+        },
+        vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden",
+        },
+
         sort_mru = true,
         sorting_strategy = 'ascending',
+        color_devicons = true,
         layout_config = {
-            prompt_position = 'top'
+            prompt_position = 'top',
+            horizontal = {
+                width_padding = 0.04,
+                height_padding = 0.1,
+                preview_width = 0.6,
+            },
+            vertical = {
+                width_padding = 0.05,
+                height_padding = 1,
+                preview_height = 0.5,
+            },
         },
         border = true,
         prompt_prefix = '   ',
         hl_result_eol = true,
         results_title = "",
-        winblend = 0,
+        winblend = 4,
         wrap_results = true
     }
 }
-

@@ -18,6 +18,10 @@ vim.cmd([[
     augroup end
 ]])
 
+
+
+
+
 -- Remove padding in terminal
 vim.cmd('autocmd TermOpen * setlocal signcolumn=no')
 
@@ -88,4 +92,5 @@ vim.g.rnvimr_draw_border = 1
 vim.g.rnvimr_pick_enable = 1
 vim.g.rnvimr_pick_create = 0
 
+vim.g.rnvimr_enable_treesitter = 1
 
