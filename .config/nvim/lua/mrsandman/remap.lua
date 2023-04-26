@@ -7,10 +7,15 @@ vim.g.mapleader = " "
 
 -- LEADER Keybinds (Space for this config)
 -- 
--- Netrw start / Change to ranger
+-- Source current config file
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
+
+-- Netrw start 
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
--- RNVIMR toggle
+-- RNVIMR / ranger toggle
 vim.keymap.set("n", "<leader>r", ':RnvimrToggle<CR>', ( { silent = true, noremap = true} ))
 
 -- Substitutor for current word:
@@ -19,11 +24,6 @@ vim.keymap.set("n", "<leader>s",[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><L
 -- Set files to be executable:
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- Source current config file
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-
 -- greatest remap ever,  replace current selection with paste buffer
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
@@ -31,6 +31,8 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
 
+-- Packer Sync shortcut
+vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>", { noremap = true, silent = true })
 
 -- CTRL Keybinds
 -- Quitting and saving exit

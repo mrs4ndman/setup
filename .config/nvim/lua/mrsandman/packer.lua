@@ -54,14 +54,12 @@ use ('nvim-treesitter/playground')
 
 -- 5.- External integration: Git, tmux, ranger & fzf, also remembers where I was in the buffer
 use ('christoomey/vim-tmux-navigator')
+use ('tmux-plugins/vim-tmux')
 use ('junegunn/fzf')
 use ('tpope/vim-fugitive')
 use ('tpope/vim-commentary')
   -- Git signs on the gutter
 use ('lewis6991/gitsigns.nvim')
-
-
-
 use ('farmergreg/vim-lastplace')
 use ('kevinhwang91/rnvimr')
 
