@@ -169,7 +169,6 @@ alias bup="source ~/.bashrc && echo 'Sourced .bashrc OK - .bashrc recargado OK'"
 alias dwn='cd ~/Descargas'
 alias dtop='cd ~/Escritorio'
 alias gch='cd ~/Gitchub'
-alias gch='cd ~/Gitchub'
 alias nvrc='nvim .config/nvim/'
 alias vimbash='vim ~/.bashrc'
 alias vrc='vim ~/.vimrc'
