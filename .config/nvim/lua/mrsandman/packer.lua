@@ -22,22 +22,11 @@ return require('packer').startup(function(use)
     }
   }
 
--- 2.- Load Telescope
---
--- require('telescope').setup{
---  defaults = {
---    vimgrep_arguments = {
---      'rg',
---      '--color=never',
---      '--no-heading',
---      '--with-filename',
---      '--line-number',
---      '--column',
---      '--smart-case',
---      '-uu' -- **This is the setting not being respected**
---    }
---  }
---}
+-- 2.- Load Telescope extensions
+use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
+use 'cljoly/telescope-repo.nvim'
+
 
 
 -- 3.- Theme plugin config
