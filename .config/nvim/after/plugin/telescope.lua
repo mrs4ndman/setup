@@ -3,6 +3,7 @@ local builtin = require('telescope.builtin')
 local telescope_builtin = require 'telescope.builtin'
 local telescope_actions = require 'telescope.actions'
 
+
 -- Keymaps
 
 vim.keymap.set('n', '<leader>tt', builtin.find_files, {})
@@ -10,6 +11,7 @@ vim.keymap.set('n', '<leader>tg', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 vim.keymap.set('n', '<leader>tr', ':Telescope repo list<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>th', builtin.oldfiles )
 
 
 -- Main setup
@@ -72,6 +74,7 @@ telescope.setup {
         wrap_results = true
     }
 }
+
 
 -- Extension invoking:
 --
