@@ -25,16 +25,73 @@ NVIM: Custom keybinds with space
  
  J = append line below to current one
  Q = Manually unbound in config (do not need it)
+ x = The better way to delete characters
+ b & w = Jump backwards and forwards to the beggining of words
+ e = Go to the ending of a word 
+ p = Pastes either the last thing yanked or deleted    
+ d$ = deletes from the cursor to the end of the line
+ d0 = deletes from the beginning of the line to the cursor
+ $ = Go to the end of the line
+ _ = Go to the start of the line
+ 0 = Go to the beginning character of the line
+
+ f<char> = Goes forward to the specified character in the line
+    Can be combined with x to eliminate certain characters
  
+ t<char> = Jumps to right before the specified character in the line (e.g. > )
+    used with t<char> or f<char>
+    , = Go to the previous instance (but right before it)
+    ; = Go to the next instance (but right before it)
+
+ F<char> = Goes backwards to the specified character in the line (e.g. <) 
+
+ T<char> = Jumps to right after the previous specified character in the line (e.g. = ) 
+    T<char> is a mirror of t<char>, same with f & F
+    used with T<char> or F<char>
+
+Both t / T & f / F can be used with d, c, y, v (visual mode) & p
+
+    df<char> deletes From the cursor to the next specified character in the line 
+    dF<char> deletes From the cursor to the previous specified character in the line
+    dt<char> deletes from the cursor To right before the next specified character in the line
+    dT<char> deletes from the cursor To right after the previous specified character in the line 
+    
+    vf<char> selects From the cursor to the next specified character in the line 
+    vF<char> selects From the cursor to the previous specified character in the line
+    vt<char> selects from the cursor To right before the next specified character in the line
+    vT<char> selects from the cursor To right after the previous specified character in the line 
+
+    yf<char> yanks From the cursor to the next specified character in the line 
+    yF<char> yanks From the cursor to the previous specified character in the line
+    yt<char> yanks from the cursor To right before the next specified character in the line
+    yT<char> yanks from the cursor To right after the previous specified character in the line 
+
+    cf<char> changes From the cursor to the next specified character in the line 
+    cF<char> changes From the cursor to the previous specified character in the line
+    ct<char> changes from the cursor To right before the next specified character in the line
+    cT<char> changes from the cursor To right after the previous specified character in the line 
+
+    pf<char> pastes From the cursor to the next specified character in the line 
+    pF<char> pastes From the cursor to the previous specified character in the line
+    pt<char> pastes from the cursor To right before the next specified character in the line
+    pT<char> pastes from the cursor To right after the previous specified character in the line 
+
 
  INSERT:
 
- Ctrl + c = Escape (i know right)
+ Ctrl + c = Escape (i know, right?)
+ i = Enter insert mode right on the cursor
+ I = Enter insert mode, but position the cursor at the beginning of the line
+ a = Enter insert mode, but right after the cursor
+ A = Enter insert mode, but right over the end of the line
+ o = Enter insert mode, but in a new line below the one we're in
+ O = Enter insert mode, but in a new line above the one we're in
  
 
  VISUAL:
 
  J & K: Move selection completely up or down inside the buffer
+ V: Selects current line (can overwrite it by pasting it)
 
 
 
