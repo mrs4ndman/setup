@@ -143,6 +143,7 @@ alias trunk='tree -a -C'
 alias afk='watch -n 1 neofetch --stdout | lolcat'
 alias bc='batcat'
 alias bt='bashtop'
+alias ct='batcat --number'
 alias empty-can='trash-empty'
 alias fsh='flameshot >/dev/null 2>&1 &! disown'
 alias lebron-james='trash-put'
@@ -170,7 +171,7 @@ alias dwn='cd ~/Descargas'
 alias dtop='cd ~/Escritorio'
 alias gch='cd ~/Gitchub'
 alias nvrc='nvim .config/nvim/'
-alias vimbash='vim ~/.bashrc'
+alias nvbash='nvim ~/.bashrc'
 alias vrc='vim ~/.vimrc'
 
 # 4.- In-shell program option shortcuts | Atajos a funciones concretas de programas de shell
@@ -317,3 +318,4 @@ fi
 # Comment out this line if you haven't got it configured
     minifetch
 
+    
