@@ -133,7 +133,7 @@ local components = {
 }
 
 require('cokeline').setup({
-    show_if_buffers_are_at_least = 2, -- It allows to hide it when in a single buffer
+--   show_if_buffers_are_at_least = 2, -- It allows to hide it when in a single buffer
   buffers = {
     -- filter_valid = function(buffer) return buffer.type ~= 'terminal' end,
     -- filter_visible = function(buffer) return buffer.type ~= 'terminal' end,

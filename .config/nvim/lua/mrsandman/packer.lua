@@ -14,13 +14,13 @@ return require('packer').startup(function(use)
 --
 -- 1.- Telescope config
 
-  use {
-	'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	requires = {
+use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = {
         'nvim-lua/popup.nvim',
         'nvim-lua/plenary.nvim',
     }
-  }
+}
 
 
 -- 2.- Load Telescope extensions
@@ -30,11 +30,11 @@ use 'cljoly/telescope-repo.nvim'
 
 
 -- 3.- Theme plugin config
-  use({ 'rose-pine/neovim',
-  as = 'rose-pine',
-  config = function()
-	  vim.cmd('colorscheme rose-pine')
-  end
+use({ 'rose-pine/neovim',
+as = 'rose-pine',
+config = function()
+    vim.cmd('colorscheme rose-pine')
+end
 })
 
 -- Plugin loader optimization:
@@ -50,7 +50,7 @@ use ('tmux-plugins/vim-tmux')
 use ('junegunn/fzf')
 use ('tpope/vim-fugitive')
 use ('tpope/vim-commentary')
-  -- Git signs on the gutter
+-- Git signs on the gutter
 use ('lewis6991/gitsigns.nvim')
 use ('farmergreg/vim-lastplace')
 use ('kevinhwang91/rnvimr')
@@ -74,71 +74,71 @@ use ('ap/vim-css-color')
 -- Dashboard config
 
 use {
-  'glepnir/dashboard-nvim',
-  event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-      -- config
-    }
-  end,
-  requires = {'nvim-tree/nvim-web-devicons'}
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+        require('dashboard').setup {
+            -- config
+        }
+    end,
+    requires = {'nvim-tree/nvim-web-devicons'}
 }
 
 
 -- 8.- Autopairs & tabout for tabbing out of said pairs
 use {
-	"windwp/nvim-autopairs",
+    "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
 }
 
 -- Lua config for tabout
 use {
-  'abecodes/tabout.nvim',
-  config = function()
-    require('tabout').setup {
-    tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
-    backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
-    act_as_tab = true, -- shift content if tab out is not possible
-    act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
-    default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
-    default_shift_tab = '<C-d>', -- reverse shift default action,
-    enable_backwards = true, -- well ...
-    completion = true, -- if the tabkey is used in a completion pum
-    tabouts = {
-      {open = "'", close = "'"},
-      {open = '"', close = '"'},
-      {open = '`', close = '`'},
-      {open = '(', close = ')'},
-      {open = '[', close = ']'},
-      {open = '{', close = '}'}
-    },
-    ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-    exclude = {} -- tabout will ignore these filetypes
-}
-  end,
-	wants = {'nvim-treesitter'}, -- or require if not used so far
-	after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
+    'abecodes/tabout.nvim',
+    config = function()
+        require('tabout').setup {
+            tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
+            backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
+            act_as_tab = true, -- shift content if tab out is not possible
+            act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
+            default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
+            default_shift_tab = '<C-d>', -- reverse shift default action,
+            enable_backwards = true, -- well ...
+            completion = true, -- if the tabkey is used in a completion pum
+            tabouts = {
+                {open = "'", close = "'"},
+                {open = '"', close = '"'},
+                {open = '`', close = '`'},
+                {open = '(', close = ')'},
+                {open = '[', close = ']'},
+                {open = '{', close = '}'}
+            },
+            ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
+            exclude = {} -- tabout will ignore these filetypes
+        }
+    end,
+    wants = {'nvim-treesitter'}, -- or require if not used so far
+    after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
 }
 
 -- 9.- LSP Configuration
 use {
-	'VonHeikemen/lsp-zero.nvim',
-	branch = 'v2.x',
-	requires = {
-		-- LSP Support
-		{'neovim/nvim-lspconfig'},             -- Required
-		{                                      -- Optional
-		'williamboman/mason.nvim',
-		run = function()
-			pcall(vim.cmd, 'MasonUpdate')
-		end,
-	},
-	{'williamboman/mason-lspconfig.nvim'}, -- Optional
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {                                      -- Optional
+        'williamboman/mason.nvim',
+        run = function()
+            pcall(vim.cmd, 'MasonUpdate')
+        end,
+    },
+    {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-	-- Autocompletion
-	{'hrsh7th/nvim-cmp'},     -- Required
-	{'hrsh7th/cmp-nvim-lsp'}, -- Required
-	{'L3MON4D3/LuaSnip'},     -- Required
+    -- Autocompletion
+    {'hrsh7th/nvim-cmp'},     -- Required
+    {'hrsh7th/cmp-nvim-lsp'}, -- Required
+    {'L3MON4D3/LuaSnip'},     -- Required
 }
 }
 
@@ -150,15 +150,15 @@ use("folke/zen-mode.nvim")
 -- 11.- Trouble: Diagnostics and status tool:
 
 use({
-      "folke/trouble.nvim",
-      config = function()
-          require("trouble").setup {
-              icons = false,
-              -- your configuration comes here
-              -- or leave it empty to use the default settings
-          }
-      end
-  })
+    "folke/trouble.nvim",
+    config = function()
+        require("trouble").setup {
+            icons = false,
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+        }
+    end
+})
 
 
 -- 1X.- Devicons for rnvimr & telescope 
@@ -168,7 +168,4 @@ use 'nvim-tree/nvim-web-devicons'
 
 
 end)
-
-
-
 -- eof --

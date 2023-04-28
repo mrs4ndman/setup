@@ -73,6 +73,13 @@ vim.opt.timeoutlen = 2000
 -- Color columns
 vim.opt.colorcolumn = "90"
 
+-- Undotree & NVIM integration config:
+vim.o.swapfile = false
+vim.o.backup = false
+vim.o.undofile = true
+vim.o.undodir = '/home/mrsandman/.cache/nvim/undodir'
+
+
 -- NVIM AIRLINE CONF
 -- Enable airline
 vim.g.airline_enabled = 1

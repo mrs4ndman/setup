@@ -1,6 +1,6 @@
 NVIM: Custom keybinds with space
 
-(assuming Space is leader)
+(assuming Space is leader in neovim)
 
  Leader + Leader = Source current file
  Leader + b = Base binding for ----
@@ -10,7 +10,6 @@ NVIM: Custom keybinds with space
  Leader + p = Base binding for ---
  Leader + s = Substitutor for current word
  Leader + x = Make the current file executable (chmod +x)
-
 
 
  -- Cokeline plugin [ .config/nvim/after/plugin/cokeline.lua ] --
@@ -30,7 +29,7 @@ NVIM: Custom keybinds with space
   Leader + g + d = Fugitive git diff
 
 
- -- Harpoon plugin --
+ -- Harpoon plugin [ .config/nvim/after/plugin/harpoon.lua ] --
 
  Leader + 1 = Harpoon file 1
  Leader + 2 = Harpoon file 1
@@ -112,15 +111,15 @@ Leader + Ñ (or whatever is here in english) = Nothing
 Leader + Z = Nothing
 Leader + X = Nothing
 Leader + V = Nothing
-Leader + N  
-Leader + M
+Leader + N = Nothing 
+Leader + M = Nothing
 
 
 
 
 TMUX: Default keybinds
 
-(assuming Ctrl + s as prefix / leader)
+(assuming Ctrl + s as prefix / leader for tmux)
 
 Leader + ? = List all key bindings
 
