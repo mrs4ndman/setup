@@ -1,6 +1,8 @@
 -- Cursor config
 vim.opt.guicursor = ""
 
+-- NVIM terminal config
+--
 -- Set default terminal mode to insert & remove line numbers in terminal buffers
 vim.cmd("autocmd! TermOpen * startinsert")
 vim.cmd([[
@@ -18,13 +20,10 @@ vim.cmd([[
     augroup end
 ]])
 
-
-
-
-
 -- Remove padding in terminal
 vim.cmd('autocmd TermOpen * setlocal signcolumn=no')
 
+-- Sidebar & tab config
 -- Numbers config
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -35,6 +34,8 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+
+-- General config
 -- Clipboard
 vim.cmd('set clipboard+=unnamedplus')
 
@@ -76,11 +77,13 @@ vim.opt.colorcolumn = "90"
 -- Enable airline
 vim.g.airline_enabled = 1
 
-vim.g.airline_highlighting_cache = 1
-vim.g.airline_powerline_fonts = 1
-
 -- Use a specific theme
 vim.g.airline_theme = 'minimalist'
+
+vim.g.airline_highlighting_cache = 1
+vim.g.airline_powerline_fonts = 1
+vim.g.airline_extensions_warning_enabled = 0
+
 
 -- RNVIMR CONFIG
 vim.g.rnvimr_ex_enable = 0
@@ -93,6 +96,7 @@ vim.g.rnvimr_pick_enable = 1
 vim.g.rnvimr_pick_create = 0
 
 vim.g.rnvimr_enable_treesitter = 1
+
 
 -- Provider config
 vim.g.loaded_perl_provider = 0

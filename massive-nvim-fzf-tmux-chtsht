@@ -2,50 +2,103 @@ NVIM: Custom keybinds with space
 
 (assuming Space is leader)
 
-Leader + Leader = Source current file
-Leader + e = Ex (Nvim Integrated Explorer)
-Leader + r = Ranger with rnvimr plugin inside Nvim
-Leader + u = Undotree plugin (pops window on left side) 
-Leader + p = Base binding for ---
-Leader + t + t = Telescope plugin
-Leader + t + g = Live grep the file, telescope plugin
-Leader + t + h = History of recently opened files
-Leader + t + r = Repo list, repo telescope plugin
-Leader + s = Substitutor for current word
-Leader + zz = Zen mode
-Leader + zZ = Zen mode without numbers and wrap
-Leader + x = Make the current file executable (chmod +x)
-Leader + b = Base binding for ----
-Leader + b + n = Next buffer
-Leader + b + p = Previous buffer
+ Leader + Leader = Source current file
+ Leader + b = Base binding for ----
+    Leader + b + n = Next buffer
+    Leader + b + p = Previous buffer
+ Leader + e = Ex (Nvim Integrated Explorer)
+ Leader + p = Base binding for ---
+ Leader + s = Substitutor for current word
+ Leader + x = Make the current file executable (chmod +x)
 
-Leader + x + q = Trouble toggle quickfix
-Leader + x + x = Full trouble toggle
-Leader + x + w = Trouble workspace diagonostics 
-Leader + x +   = Troublej
 
-Leader + g + s = Fugitive git status
-Leader + g + d = Fugitive git diff
 
-Leader + 1 = Harpoon file 1
-Leader + 2 = Harpoon file 1
-Leader + 3 = Harpoon file 1
-Leader + 4 = Harpoon file 1
-Leader + 5 = Harpoon file 1
-Leader + 6 = Harpoon file 1
-Leader + 7 = Harpoon file 1
-Leader + 8 = Harpoon file 1
+ -- Cokeline plugin [ .config/nvim/after/plugin/cokeline.lua ] --
 
-Leader + h = Harpoon main screen / Plugin
-Leader + a = Harpoon mark keybind 
-Leader + t + 1 = Harpoon terminal 1
-Leader + t + 2 = Harpoon terminal 2
-Leader + t + 3 = Harpoon terminal 3
-Leader + t + 4 = Harpoon terminal 4
+  Leader + c + n = Focus on next buffer in the cokeline
+  Leader + c + p = Focus on previous buffer in the cokeline
+  Leader + c + s + n = Switch current buffer with the next buffer in the cokeline
+  Leader + c + s + p = Switch current buffer with the previous buffer in the cokeline
+  Leader + c + c = Pick (based on a letter index) which of the session buffers to close
+  Leader + c + <Number> = Focus / change to the buffer with the buffer numbered <Number>
+  Leader + c + s + <Number> = Switch the current buffer with the buffer numbered <Number>
+
+
+ -- Fugitive plugin [ .config/nvim/after/plugin/fugitive.lua ] --
+
+  Leader + g + s = Fugitive git status
+  Leader + g + d = Fugitive git diff
+
+
+ -- Harpoon plugin --
+
+ Leader + 1 = Harpoon file 1
+ Leader + 2 = Harpoon file 1
+ Leader + 3 = Harpoon file 1
+ Leader + 6 = Harpoon file 1
+ Leader + 7 = Harpoon file 1
+ Leader + 8 = Harpoon file 1
+
+ Leader + h = Harpoon main screen / Plugin
+ Leader + a = Harpoon mark keybind 
+ Leader + t + 1 = Harpoon terminal 1
+ Leader + t + 2 = Harpoon terminal 2
+ Leader + t + 3 = Harpoon terminal 3
+ Leader + t + 4 = Harpoon terminal 4
+
+
+
+ -- LSP keybinds --
+ Ctrl + p = Previous LSP suggestion / item
+ Ctrl + n = Next LSP suggestion / item
+ Ctrl + y = Confirm selected suggestion / item
+ Ctrl + Space = Complete suggestion ??
+
+
+ -- Packer plugin manager --
+  
+ Leader + p + s = Packer Sync
+
+ 
+ -- Ranger / rnvimr plugin --
+
+ Leader + r = Ranger with rnvimr plugin inside Nvim
+
+
+
+ -- Telescope plugin & extensions --
+ 
+ Leader + t + g = Live grep the file, telescope plugin
+ Leader + t + h = History of recently opened files
+ Leader + t + r = Repo list, repo telescope plugin
+ Leader + t + t = Telescope plugin
+
+
+ -- Trouble plugin --
+
+ Leader + x + q = Trouble toggle quickfix
+ Leader + x + w = Trouble workspace diagnostics 
+ Leader + x + x = Trouble full toggle
+ Leader + x + d = Trouble document diagnostics
+ Leader + x + l = Trouble location list
+
+ 
+ -- Undotree plugin --
+
+ Leader + u = Toggle Undo tree (pops window on the side
+ (look in on how to make it autofocus))
+
+
+ -- Zenmode plugin --
+
+ Leader + zz = Zen mode
+ Leader + zZ = Zen mode without numbers and wrap
+
+
+ -- Unbound --
 
 Leader + Q = Nothing
 Leader + W = Nothing
-Leader + T = Nothing
 Leader + Y = Nothing
 Leader + I = Nothing
 Leader + O = Nothing
@@ -58,11 +111,9 @@ Leader + L = Nothing
 Leader + Ñ (or whatever is here in english) = Nothing
 Leader + Z = Nothing
 Leader + X = Nothing
-Leader + C = Nothing
 Leader + V = Nothing
 Leader + N  
 Leader + M
-
 
 
 

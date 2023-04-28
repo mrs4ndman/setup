@@ -12,6 +12,10 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- Buffer previous and next
+vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
+
 -- Netrw start 
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
@@ -24,15 +28,12 @@ vim.keymap.set("n", "<leader>s",[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><L
 -- Set files to be executable:
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- Packer Sync shortcut
+vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>", { noremap = true, silent = true })
+
 -- greatest remap ever,  replace current selection with paste buffer
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
--- Buffer previous and next
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
-
--- Packer Sync shortcut
-vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>", { noremap = true, silent = true })
 
 -- CTRL Keybinds
 -- Quitting and saving exit

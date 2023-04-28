@@ -8,6 +8,7 @@ map('n', '<leader>cn', '<Plug>(cokeline-focus-next)', { silent = true })
 map('n', '<leader>cp', '<Plug>(cokeline-focus-prev)', { silent = true })
 map('n', '<leader>csn', '<Plug>(cokeline-switch-next)', { silent = true })
 map('n', '<leader>csp', '<Plug>(cokeline-switch-prev)', { silent = true })
+map('n', '<leader>cc', '<Plug>(cokeline-pick-close)', { silent = true })
 
 -- Number buffer selection with Leader + c + <number>
 for i = 1,9 do
