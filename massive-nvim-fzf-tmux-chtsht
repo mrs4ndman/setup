@@ -7,10 +7,10 @@ Leader + e = Ex (Nvim Integrated Explorer)
 Leader + r = Ranger with rnvimr plugin inside Nvim
 Leader + u = Undotree plugin (pops window on left side) 
 Leader + p = Base binding for ---
-Leader + p + t = Telescope plugin
-Leader + p + g = Live grep the file, telescope plugin
-Leader + h = Harpoon main screen / Plugin
-Leader + a = Harpoon mark keybind 
+Leader + t + t = Telescope plugin
+Leader + t + g = Live grep the file, telescope plugin
+Leader + t + h = History of recently opened files
+Leader + t + r = Repo list, repo telescope plugin
 Leader + s = Substitutor for current word
 Leader + zz = Zen mode
 Leader + zZ = Zen mode without numbers and wrap
@@ -19,6 +19,29 @@ Leader + b = Base binding for ----
 Leader + b + n = Next buffer
 Leader + b + p = Previous buffer
 
+Leader + x + q = Trouble toggle quickfix
+Leader + x + x = Full trouble toggle
+Leader + x + w = Trouble workspace diagonostics 
+Leader + x +   = Troublej
+
+Leader + g + s = Fugitive git status
+Leader + g + d = Fugitive git diff
+
+Leader + 1 = Harpoon file 1
+Leader + 2 = Harpoon file 1
+Leader + 3 = Harpoon file 1
+Leader + 4 = Harpoon file 1
+Leader + 5 = Harpoon file 1
+Leader + 6 = Harpoon file 1
+Leader + 7 = Harpoon file 1
+Leader + 8 = Harpoon file 1
+
+Leader + h = Harpoon main screen / Plugin
+Leader + a = Harpoon mark keybind 
+Leader + t + 1 = Harpoon terminal 1
+Leader + t + 2 = Harpoon terminal 2
+Leader + t + 3 = Harpoon terminal 3
+Leader + t + 4 = Harpoon terminal 4
 
 Leader + Q = Nothing
 Leader + W = Nothing
