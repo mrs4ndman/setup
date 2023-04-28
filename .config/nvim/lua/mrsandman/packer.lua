@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
 
 -- MAIN PLUGIN CONFIG
 -- INCLUDES LSP BASE CONFIG, TMUX CONFIG, AUTOPAIRS, 
+--
 -- 1.- Telescope config
 
   use {
@@ -36,6 +37,8 @@ use 'cljoly/telescope-repo.nvim'
   end
 })
 
+-- Plugin loader optimization:
+use 'lewis6991/impatient.nvim'
 
 -- 4.- Treesitter modules
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -60,8 +63,27 @@ use ('mbbill/undotree')
 
 -- 7.- UI customization
 use {'vim-airline/vim-airline', requires = { 'vim-airline/vim-airline-themes' } }
+use ({
+    'willothy/nvim-cokeline',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function()
+        require('cokeline').setup()
+    end
+})
 use ('ap/vim-css-color')
-use 'nvim-tree/nvim-web-devicons'
+-- Dashboard config
+
+use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+    }
+  end,
+  requires = {'nvim-tree/nvim-web-devicons'}
+}
+
 
 -- 8.- Autopairs & tabout for tabbing out of said pairs
 use {
@@ -125,15 +147,26 @@ use {
 use("folke/zen-mode.nvim")
 
 
--- 11.- 
+-- 11.- Trouble: Diagnostics and status tool:
 
-
-
-
+use({
+      "folke/trouble.nvim",
+      config = function()
+          require("trouble").setup {
+              icons = false,
+              -- your configuration comes here
+              -- or leave it empty to use the default settings
+          }
+      end
+  })
 
 
 -- 1X.- Devicons for rnvimr & telescope 
 use ('ryanoasis/vim-devicons')
+use 'nvim-tree/nvim-web-devicons'
+
+
+
 end)
 
 
