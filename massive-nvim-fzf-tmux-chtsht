@@ -6,10 +6,36 @@ NVIM: Custom keybinds with space
  Leader + b = Base binding for ----
     Leader + b + n = Next buffer
     Leader + b + p = Previous buffer
+    Leader + b + c = Buffer close / delete from list
+
  Leader + e = Ex (Nvim Integrated Explorer)
  Leader + p = Base binding for ---
  Leader + s = Substitutor for current word
  Leader + x = Make the current file executable (chmod +x)
+ 
+ 
+ Modal keybinds (not global)
+
+ NORMAL:
+
+ Ctrl + q = :q! <CR>
+ Ctrl + w = :w <CR>
+ Ctrl + d = Goes half a page down
+ Ctrl + u = Goes half a page up
+ 
+ J = append line below to current one
+ Q = Manually unbound in config (do not need it)
+ 
+
+ INSERT:
+
+ Ctrl + c = Escape (i know right)
+ 
+
+ VISUAL:
+
+ J & K: Move selection completely up or down inside the buffer
+
 
 
  -- Cokeline plugin [ .config/nvim/after/plugin/cokeline.lua ] --

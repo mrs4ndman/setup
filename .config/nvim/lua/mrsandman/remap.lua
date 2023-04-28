@@ -1,9 +1,9 @@
 -- Main Keybind config file: Other keybinds are in their own .lua config files
 -- MrSandman config / Forked from ThePrimeagen's NVIM 0 to LSP video & GitHub
 --
---
 -- Key thing: Mapleader as Space
 vim.g.mapleader = " "
+
 
 -- LEADER Keybinds (Space for this config)
 -- 
@@ -15,6 +15,7 @@ end)
 -- Buffer previous and next
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bc", ":bd<CR>", { noremap = true, silent = true })
 
 -- Netrw start 
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
