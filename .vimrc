@@ -6,17 +6,26 @@ filetype plugin indent on
 
 " Zona donde colocas los plugins (Este gestor de plug-ins es vim-plug / Plug
 call plug#begin('~/.vim/plugged')
+" Code processing / debugging & alteration
 Plug 'dense-analysis/ale'
+Plug 'tpope/vim-commentary'
+" UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+" UX
 Plug 'farmergreg/vim-lastplace'
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux'
 call plug#end()
+
+" SET ZONE "
 
 " Configuración cambio modo y línea de modos
 set ttimeoutlen=10
 set noshowmode
+set timeoutlen=2000
 
 " Netrw config | Configuración de netrw
 let g:netrw_list_mode=1
@@ -52,6 +61,15 @@ set foldlevel=99
 " Highlight search results | Resalta los resultados de búsqueda
 set hlsearch
 set incsearch
+
+
+" KEYBINDINGS "
+" Configuración NERDTree (atajo de teclado)
+
+silent nnoremap <C-n> :NERDTreeToggle<CR>
+silent nnoremap <C-w> :w<CR>
+
+" PLUGIN CONFIG MANAGEMENT "
 
 " Enable code linting with Ale | Permite linting del código
 let g:ale_completion_enabled = 1

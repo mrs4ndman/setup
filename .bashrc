@@ -141,7 +141,6 @@ alias trunk='tree -a -C'
 # 2.- Program shorthands | Atajos cortos a programas
 
 alias afk='watch -n 1 neofetch --stdout | lolcat'
-alias bc='batcat'
 alias bt='bashtop'
 alias ct='batcat --number'
 alias empty-can='trash-empty'
@@ -241,6 +240,7 @@ alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lscpi; diskusage; df -hl -x sq
 
 #-------------------------------------------------------------#
 
+
 #------------------------ GIT ALIAS ZONE ---------------------#
 
 alias gaa='git add .'
@@ -302,7 +302,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# FZF integration (https://github.com/junegunn/fzf)
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 
 #------------- PLUGIN AND ALIAS LOADING SCRIPTS --------------#
 
@@ -313,9 +316,28 @@ fi
  if command -v starship >/dev/null 2>&1; then
      eval "$(starship init bash)"
  fi
+
 #------------- MINIFETCH ON TERMINAL WINDOW START ---------------#
 # Minifetch is an alias for my alternate neofetch config
-# Comment out this line if you haven't got it configured
-    minifetch
+# Comment out this line if you haven't the alias and separate 
+# config for it
+#
+minifetch
 
-    
+
+#---------------- bat (cat improved) integration ----------------#
+#
+# Can remove / comment out if not using bat as a cat frontend
+#
+eval "$(batpipe)"
+# Invokes batpipe
+LESSOPEN="|/usr/local/bin/batpipe %s";
+export LESSOPEN;
+unset LESSCLOSE;
+
+# Uses batpipe as a preprocessor for less
+LESS="$LESS -R";
+BATPIPE="color";
+export LESS;
+export BATPIPE;
+
