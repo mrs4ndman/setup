@@ -74,7 +74,6 @@ telescope.setup {
     }
 }
 
-
 -- Extension invoking:
 --
 require('telescope').load_extension "fzf"

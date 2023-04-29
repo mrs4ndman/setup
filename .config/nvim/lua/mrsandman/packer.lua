@@ -61,9 +61,9 @@ use 'ThePrimeagen/vim-be-good'
 use 'ThePrimeagen/harpoon'
 use 'mbbill/undotree'
 
+
 -- 7.- UI customization
-use 'rcarriga/nvim-notify'
-use 'ap/vim-css-color'
+-- Status / buffer lines
 use 'nvim-lualine/lualine.nvim'
 use ({
     'willothy/nvim-cokeline',
@@ -73,9 +73,13 @@ use ({
     end
 })
 
+-- Notifications and CSS color show
+use 'rcarriga/nvim-notify'
+use 'ap/vim-css-color'
 
--- Dashboard config
 
+-- Dashboard on startup config
+--
 use {
     'glepnir/dashboard-nvim',
     event = 'VimEnter',
