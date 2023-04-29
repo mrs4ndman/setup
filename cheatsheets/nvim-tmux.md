@@ -104,7 +104,7 @@
 
 ## NVIM: Custom keybinds with space as leader & modal keybinds for easy motions
 
-##### All related configs on [here](https://github.com/mrsandman/setup)
+##### All related configs on [here](https://github.com/mrs4ndman/setup)
 
 - #### (assuming Space is leader in neovim)
 	
