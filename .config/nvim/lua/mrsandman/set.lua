@@ -79,17 +79,10 @@ vim.o.backup = false
 vim.o.undofile = true
 vim.o.undodir = '/home/mrsandman/.cache/nvim/undodir'
 
+-- NVIM Notify plugin
+vim.notify = require("notify")
 
--- NVIM AIRLINE CONF
--- Enable airline
-vim.g.airline_enabled = 1
-
--- Use a specific theme
-vim.g.airline_theme = 'minimalist'
-
-vim.g.airline_highlighting_cache = 1
-vim.g.airline_powerline_fonts = 1
-vim.g.airline_extensions_warning_enabled = 0
+-- NVIM LUALINE CONF
 
 
 -- RNVIMR CONFIG

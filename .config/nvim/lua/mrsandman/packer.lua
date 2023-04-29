@@ -42,27 +42,29 @@ use 'lewis6991/impatient.nvim'
 
 -- 4.- Treesitter modules
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-use ('nvim-treesitter/playground')
+use 'nvim-treesitter/playground'
 
 -- 5.- External integration: Git, tmux, ranger & fzf, also remembers where I was in the buffer
-use ('christoomey/vim-tmux-navigator')
-use ('tmux-plugins/vim-tmux')
-use ('junegunn/fzf')
-use ('tpope/vim-fugitive')
-use ('tpope/vim-commentary')
+use 'christoomey/vim-tmux-navigator'
+use 'tmux-plugins/vim-tmux'
+use 'junegunn/fzf'
+use 'tpope/vim-fugitive'
+use 'tpope/vim-commentary'
 -- Git signs on the gutter
-use ('lewis6991/gitsigns.nvim')
-use ('farmergreg/vim-lastplace')
-use ('kevinhwang91/rnvimr')
+use 'lewis6991/gitsigns.nvim'
+use 'farmergreg/vim-lastplace'
+use 'kevinhwang91/rnvimr'
 
 
 -- 6.- ThePrimeagen plugins (Blazingly Fast)
-use ('ThePrimeagen/vim-be-good')
-use ('ThePrimeagen/harpoon')
-use ('mbbill/undotree')
+use 'ThePrimeagen/vim-be-good'
+use 'ThePrimeagen/harpoon'
+use 'mbbill/undotree'
 
 -- 7.- UI customization
-use {'vim-airline/vim-airline', requires = { 'vim-airline/vim-airline-themes' } }
+use 'rcarriga/nvim-notify'
+use 'ap/vim-css-color'
+use 'nvim-lualine/lualine.nvim'
 use ({
     'willothy/nvim-cokeline',
     requires = 'kyazdani42/nvim-web-devicons',
@@ -70,7 +72,8 @@ use ({
         require('cokeline').setup()
     end
 })
-use ('ap/vim-css-color')
+
+
 -- Dashboard config
 
 use {
@@ -144,12 +147,12 @@ use {
 
 
 -- 10.- Zen mode with Space + zz / zZ
-use("folke/zen-mode.nvim")
+use "folke/zen-mode.nvim"
 
 
 -- 11.- Trouble: Diagnostics and status tool:
 
-use({
+use ({
     "folke/trouble.nvim",
     config = function()
         require("trouble").setup {
@@ -162,7 +165,7 @@ use({
 
 
 -- 1X.- Devicons for rnvimr & telescope 
-use ('ryanoasis/vim-devicons')
+use 'ryanoasis/vim-devicons'
 use 'nvim-tree/nvim-web-devicons'
 
 

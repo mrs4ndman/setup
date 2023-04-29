@@ -3,7 +3,6 @@ local builtin = require('telescope.builtin')
 local telescope_builtin = require 'telescope.builtin'
 local telescope_actions = require 'telescope.actions'
 
-
 -- Keymaps
 
 vim.keymap.set('n', '<leader>tt', builtin.find_files, {})
@@ -80,3 +79,4 @@ telescope.setup {
 --
 require('telescope').load_extension "fzf"
 require('telescope').load_extension "repo"
+require('telescope').load_extension "notify"

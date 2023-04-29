@@ -18,16 +18,28 @@ NVIM: Custom keybinds with space
 
  NORMAL:
 
- Ctrl + q = :q! <CR>
- Ctrl + w = :w <CR>
- Ctrl + d = Goes half a page down
- Ctrl + u = Goes half a page up
- 
  J = append line below to current one
  Q = Manually unbound in config (do not need it)
+
+ Ctrl + q = :q! <CR>
+ Ctrl + w = :w <CR>
+ Ctrl + d = Goes half a page down / forward
+ Ctrl + u = Goes half a page up / Ctrl + b = Goes a full page up / backward
+U
+ Ctrl + f = Goes a full page down / forward
+ Ctrl + b = Goes a full page up / backward
+ Ctrl + 
+ 
  x = The better way to delete characters
- b & w = Jump backwards and forwards to the beggining of words
+ b & w = Jump backwards and forwards to the next word / different format of text (no need for space)
+ W = Jump to the next space-separated text
  e = Go to the ending of a word 
+ gg = Go to the first line
+ G = Go to the last line
+ <number>gg / <number>G = Go to line <number>
+ 
+
+
  p = Pastes either the last thing yanked or deleted    
  d$ = deletes from the cursor to the end of the line
  d0 = deletes from the beginning of the line to the cursor

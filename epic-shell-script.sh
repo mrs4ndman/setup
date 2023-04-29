@@ -41,6 +41,7 @@ sudo apt install \
     solaar \
     bat \
     vim \
+    tre-command \
     alacritty \
     neofetch \
     ranger \
@@ -169,7 +170,8 @@ mkdir -p ~/.config/nvim ~/.config/ranger ~/.config/fish ~/.config/alacritty ~/.c
 # tmux plugin manager
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
 
-# various configs
+# github various configs
+    
     wget https://raw.githubusercontent.com/mrs4ndman/setup/master/.config/ranger/rc.conf && mv rc.conf ~/.config/ranger/rc.conf &&
 
 # neovim & packer config
@@ -185,6 +187,8 @@ mkdir -p ~/.config/nvim ~/.config/ranger ~/.config/fish ~/.config/alacritty ~/.c
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
         ~/.local/share/nvim/site/pack/packer/start/packer.nvim &&
         echo "Recuerda coger la confi del GitHub" &&
+
+    cd ~
 
 echo "overriding previous configurations: 3 seconds to cancel" &&
     sleep 3 &&
@@ -206,6 +210,7 @@ echo "overriding previous configurations: 3 seconds to cancel" &&
     sleep 2
     echo "Instalar fuentes de ""https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono""" 
     echo "done! Si hay algo que ha fallado, este mensaje no se ve jeje"
+    echo "manually install bat & bat-extras from sharkdp/bat & eth-p/bat-extras"
 
         fi
 fi
