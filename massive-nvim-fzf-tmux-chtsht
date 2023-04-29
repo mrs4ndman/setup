@@ -1,34 +1,12 @@
-NVIM: Custom keybinds with space
-
-(assuming Space is leader in neovim)
-
- Leader + Leader = Source current file
- Leader + b = Base binding for ----
-    Leader + b + n = Next buffer
-    Leader + b + p = Previous buffer
-    Leader + b + c = Buffer close / delete from list
-
- Leader + e = Ex (Nvim Integrated Explorer)
- Leader + p = Base binding for ---
- Leader + s = Substitutor for current word
- Leader + x = Make the current file executable (chmod +x)
- 
- 
- Modal keybinds (not global)
+ VIM / NVIM Modal motions & keybinds (not global like leader)
 
  NORMAL:
 
- J = append line below to current one
- Q = Manually unbound in config (do not need it)
+ Ctrl + d = Goes half a page down / forward | Baja media página
+ Ctrl + u = Goes half a page up | Sube media página
 
- Ctrl + q = :q! <CR>
- Ctrl + w = :w <CR>
- Ctrl + d = Goes half a page down / forward
- Ctrl + u = Goes half a page up / Ctrl + b = Goes a full page up / backward
-U
  Ctrl + f = Goes a full page down / forward
  Ctrl + b = Goes a full page up / backward
- Ctrl + 
  
  x = The better way to delete characters
  b & w = Jump backwards and forwards to the next word / different format of text (no need for space)
@@ -37,8 +15,6 @@ U
  gg = Go to the first line
  G = Go to the last line
  <number>gg / <number>G = Go to line <number>
- 
-
 
  p = Pastes either the last thing yanked or deleted    
  d$ = deletes from the cursor to the end of the line
@@ -91,7 +67,6 @@ Both t / T & f / F can be used with d, c, y, v (visual mode) & p
 
  INSERT:
 
- Ctrl + c = Escape (i know, right?)
  i = Enter insert mode right on the cursor
  I = Enter insert mode, but position the cursor at the beginning of the line
  a = Enter insert mode, but right after the cursor
@@ -102,9 +77,53 @@ Both t / T & f / F can be used with d, c, y, v (visual mode) & p
 
  VISUAL:
 
- J & K: Move selection completely up or down inside the buffer
  V: Selects current line (can overwrite it by pasting it)
 
+
+
+
+
+NVIM: Custom keybinds with space as leader & modal keybinds for easy motions
+
+
+(assuming Space is leader in neovim)
+
+ Leader + Leader = Source current file
+ Leader + b = Base binding for ----
+    Leader + b + n = Next buffer
+    Leader + b + p = Previous buffer
+    Leader + b + c = Buffer close / delete from list
+
+ Leader + e = Ex (Nvim Integrated Explorer)
+ Leader + p = Base binding for ---
+ Leader + s = Substitutor for current word
+ Leader + x = Make the current file executable (chmod +x)
+ 
+ 
+ Modal custom keybinds (not global)
+
+ NORMAL:
+
+ J = append line below to current one
+ Q = Manually unbound in config (do not need it)
+
+ Ctrl + q = :q! <CR>
+ Ctrl + w = :w <CR>
+ 
+ Ctrl + d = Goes half a page down / forward
+ Ctrl + u = Goes half a page up / Ctrl + b = Goes a full page up / backward
+
+ Ctrl + f = Goes a full page down / forward
+ Ctrl + b = Goes a full page up / backward
+
+
+ INSERT:
+
+ Ctrl + c = Escape (i know, right?)
+
+ VISUAL:
+
+ J & K: Move selection completely up or down inside the buffer
 
 
  -- Cokeline plugin [ .config/nvim/after/plugin/cokeline.lua ] --
