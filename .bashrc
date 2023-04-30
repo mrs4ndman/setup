@@ -175,7 +175,6 @@ alias vrc='vim ~/.vimrc'
 
 # 4.- In-shell program option shortcuts | Atajos a funciones concretas de programas de shell
 
-alias alib='alias | more -n 6'
 alias bonk='exit'
 alias boop='sudo systemctl restart'
 alias cat!='sudo cat'
@@ -190,6 +189,7 @@ alias sreload='sudo systemctl reload'
 alias sshrepub='echo "Path to private >> path to recovered public"; sleep 1; ssh-keygen -y -f'
 alias sstate='sudo systemctl status'
 alias sstop='sudo systemctl stop'
+alias syncerr='find -name *.sync-*'
 alias untar='tar xvf'
 alias vm-list='sudo find / -name *.qcow2 -a -name *.vdi 2>/dev/null'
 alias vls='watch -n 0.1 ls -la'
@@ -215,10 +215,12 @@ alias wut='whatis'
 
 # 5.- Aliases that call on multiple programs / functions
 
+alias af='alias | fzf'
 alias did="history | grep"
 alias flip='sudo apt update -y && sudo apt upgrade && sudo apt autoremove && sudo apt clean'
 alias font-search='fc-list | grep'
 alias fv='nvim -o `fzf`'
+alias fenv='printenv | fzf'
 
 alias gensecpass="head -c 32 /dev/random | base64 | sed "s:[+=/]::g" | head -c 32"
 # This is a bashism, gensecpass ONLY WORKS ON BASH - gensecpass SOLO FUNCIONA EN BASH;
@@ -244,14 +246,23 @@ alias sysinfo='sudo fdisk -l; blkid; lshw; lscpu; lscpi; diskusage; df -hl -x sq
 #------------------------ GIT ALIAS ZONE ---------------------#
 
 alias gaa='git add .'
-alias gcm='git commit -m'
+alias gca='git commit --amend -m'
+alias gcm='git commit -am'
+alias gcn='git commit --amend --no-edit'
 alias gcl='git clean' 
 alias gco='git checkout'
+alias gd='git diff'
 alias gib='git init -b'
 alias gin='git init'
+alias gl='git log'
+alias glp='git log --graph --oneline --decorate'
 alias gpo='git push origin'
+alias grv='git revert'
 alias gst='git status'
-alias gd='git diff'
+alias gsh='git stash'
+alias gsa='git stash apply'
+alias gsl='git stash list'
+alias gsp='git stash pop'
 
 alias yeet='git push'
 alias yoink='git pull'
