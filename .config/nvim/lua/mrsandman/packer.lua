@@ -1,13 +1,10 @@
 -- Mr Sandman's .lua config for NVIM (NOT FINISHED) PACKER.lua
 
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]] -- the doom begins
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+use 'wbthomason/packer.nvim' -- c'mon, do your thing
 
 -- MAIN PLUGIN CONFIG
 -- INCLUDES LSP BASE CONFIG, TMUX CONFIG, AUTOPAIRS, 
@@ -15,7 +12,7 @@ return require('packer').startup(function(use)
 -- 1.- Telescope config
 
 use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim', tag = '0.1.1', -- good ole telescope
     requires = {
         'nvim-lua/popup.nvim',
         'nvim-lua/plenary.nvim',
@@ -26,11 +23,11 @@ use {
 -- 2.- Load Telescope extensions
 use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
-use 'cljoly/telescope-repo.nvim'
+use 'cljoly/telescope-repo.nvim' --telescope extension #1, the others are inside telescope.lua
 
 
 -- 3.- Theme plugin config
-use({ 'rose-pine/neovim',
+use({ 'rose-pine/neovim', -- cool light dark colors
 as = 'rose-pine',
 config = function()
     vim.cmd('colorscheme rose-pine')
@@ -38,35 +35,40 @@ end
 })
 
 -- Plugin loader optimization:
-use 'lewis6991/impatient.nvim'
+use 'lewis6991/impatient.nvim' -- speed go brr
 
 -- 4.- Treesitter modules
-use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-use 'nvim-treesitter/playground'
+use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) -- colors go brr
+use 'nvim-treesitter/playground' -- hehe
 
 -- 5.- External integration: Git, tmux, ranger & fzf, also remembers where I was in the buffer
-use 'christoomey/vim-tmux-navigator'
-use 'tmux-plugins/vim-tmux'
-use 'junegunn/fzf'
-use 'tpope/vim-fugitive'
-use 'tpope/vim-commentary'
--- Git signs on the gutter
-use 'lewis6991/gitsigns.nvim'
-use 'farmergreg/vim-lastplace'
-use 'kevinhwang91/rnvimr'
+use 'christoomey/vim-tmux-navigator' -- tmux integration
+use 'tmux-plugins/vim-tmux' -- tmux integration x2
 
+use 'junegunn/fzf' -- Fuzzy searching integration
+use 'lewis6991/gitsigns.nvim' -- Git signs on the gutter
+
+use 'tpope/vim-fugitive' -- Git integration
+use 'tpope/vim-commentary' -- Powerful commenting, thanks to tpope
+
+use 'farmergreg/vim-lastplace' -- Remembers where i left off the buffer
+use 'kevinhwang91/rnvimr' -- Terminal file manager integration
+
+-- use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+--     require("toggleterm").setup()
+-- end}
 
 -- 6.- ThePrimeagen plugins (Blazingly Fast)
-use 'ThePrimeagen/vim-be-good'
-use 'ThePrimeagen/harpoon'
-use 'mbbill/undotree'
+use 'ThePrimeagen/vim-be-good' -- Vim & Neovim keybind training
+use 'ThePrimeagen/harpoon' -- Reeling those files in
+use 'mbbill/undotree' -- What was that thing I did 10 days ago? Leader + U
 
 
 -- 7.- UI customization
 -- Status / buffer lines
-use 'nvim-lualine/lualine.nvim'
+use 'nvim-lualine/lualine.nvim' -- Best statusline for nvim in Lua
 use ({
-    'willothy/nvim-cokeline',
+    'willothy/nvim-cokeline', -- Addicted to this stuff
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
         require('cokeline').setup()
@@ -74,14 +76,15 @@ use ({
 })
 
 -- Notifications and CSS color show
-use 'rcarriga/nvim-notify'
-use 'ap/vim-css-color'
+use 'rcarriga/nvim-notify' -- Cool plugin notis
+use 'lcheylus/overlength.nvim'
+use 'ap/vim-css-color' -- Frontend stuff
 
 
 -- Dashboard on startup config
 --
 use {
-    'glepnir/dashboard-nvim',
+    'glepnir/dashboard-nvim', -- Startup screen for nvim
     event = 'VimEnter',
     config = function()
         require('dashboard').setup {
@@ -100,7 +103,7 @@ use {
 
 -- Lua config for tabout
 use {
-    'abecodes/tabout.nvim',
+    'abecodes/tabout.nvim', -- Trying to get this to work, idk what's wrong with it XD
     config = function()
         require('tabout').setup {
             tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
@@ -129,7 +132,7 @@ use {
 
 -- 9.- LSP Configuration
 use {
-    'VonHeikemen/lsp-zero.nvim',
+    'VonHeikemen/lsp-zero.nvim', -- Big boi LSP
     branch = 'v2.x',
     requires = {
         -- LSP Support
@@ -151,13 +154,13 @@ use {
 
 
 -- 10.- Zen mode with Space + zz / zZ
-use "folke/zen-mode.nvim"
+use "folke/zen-mode.nvim" -- Pure concentration
 
 
 -- 11.- Trouble: Diagnostics and status tool:
 
 use ({
-    "folke/trouble.nvim",
+    "folke/trouble.nvim", -- woops
     config = function()
         require("trouble").setup {
             icons = false,

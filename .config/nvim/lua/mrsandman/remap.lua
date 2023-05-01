@@ -18,13 +18,21 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = t
 vim.keymap.set("n", "<leader>bc", ":bd<CR>", { noremap = true, silent = true })
 
 -- Netrw start 
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { silent = true })
+
+-- Overlength toggle
+vim.keymap.set("n", "<leader>ol", ":OverlengthToggle<CR>", { silent = true })
 
 -- RNVIMR / ranger toggle
 vim.keymap.set("n", "<leader>r", ':RnvimrToggle<CR>', ( { silent = true, noremap = true} ))
 
 -- Substitutor for current word:
 vim.keymap.set("n", "<leader>s",[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- -- Terminal testing
+-- vim.keymap.set("n", "<leader>t1", ":ToggleTerm size=20 direction=horizontal<CR>")
+-- vim.keymap.set("n", "<leader>t2", ":ToggleTerm size=60 direction=vertical<CR>")
+-- vim.keymap.set("n", "<leader>t3", ":ToggleTerm size=40 direction=horizontal<CR>")
 
 -- Set files to be executable:
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -38,8 +46,8 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- CTRL Keybinds
 -- Quitting and saving exit
-vim.keymap.set("n", "<C-q>", ":q!<CR>")
-vim.keymap.set("n", "<C-w>", ":w<CR>")
+vim.keymap.set("n", "<C-q>", ":q!<CR>", { silent = true})
+vim.keymap.set("n", "<C-w>", ":w<CR>", { silent = true})
 
 -- Half-page jumping
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
@@ -50,11 +58,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
 -- NORMAL mode Keybinds
 
 -- Appending line below to current line ("lil J")
-vim.keymap.set("n", "J", "mzJ'z")
+vim.keymap.set("n", "J", "mzJ'z", { silent = true})
 
 -- Keeping my cursor in the middle when searching
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "n", "nzzzv", { silent = true})
+vim.keymap.set("n", "N", "Nzzzv", { silent = true})
 
 -- No-do
 vim.keymap.set("n", "Q", "<nop>")

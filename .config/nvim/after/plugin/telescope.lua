@@ -30,6 +30,7 @@ telescope.setup {
                 },
                 search_dirs = {
                     "~/Gitchub",
+                    "~/git-clone-zone",
                 },
             },
         },
@@ -40,7 +41,6 @@ telescope.setup {
         },
         vimgrep_arguments = {
             "rg",
-            "--color=never",
             "--no-heading",
             "--with-filename",
             "--line-number",
@@ -67,15 +67,36 @@ telescope.setup {
         },
         border = true,
         prompt_prefix = '   ',
-        hl_result_eol = true,
+        hl_result_eol = false,
         results_title = "",
-        winblend = 4,
+        winblend = 10,
         wrap_results = true
+    },
+    mappings = {
+        i = {
+            ["<C-n>"] = require('telescope.actions').cycle_history_next,
+            ["<C-p>"] = require('telescope.actions').cycle_history_prev,
+            ["<C-c>"] = require('telescope.actions').close,
+            ["<C-q>"] = require('telescope.actions').send_to_qflist,
+            ["<C-i>"] = require('telescope.actions').select_horizontal,
+            ["<C-x>"] = require('telescope.actions').select_vertical,
+        },
+        n = {
+            ["<C-n>"] = require('telescope.actions').cycle_history_next,
+            ["<C-p>"] = require('telescope.actions').cycle_history_prev,
+            ["<C-c>"] = require('telescope.actions').close,
+            ["<C-q>"] = require('telescope.actions').send_to_qflist,
+            ["<C-i>"] = require('telescope.actions').select_horizontal,
+            ["<C-x>"] = require('telescope.actions').select_vertical,
+        },
     }
 }
+
+
 
 -- Extension invoking:
 --
 require('telescope').load_extension "fzf"
 require('telescope').load_extension "repo"
 require('telescope').load_extension "notify"
+

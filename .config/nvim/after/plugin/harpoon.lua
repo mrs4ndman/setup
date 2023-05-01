@@ -13,6 +13,8 @@ vim.keymap.set("n", "<leader>5", function() ui.nav_file(5) end)
 vim.keymap.set("n", "<leader>6", function() ui.nav_file(6) end)
 vim.keymap.set("n", "<leader>7", function() ui.nav_file(7) end)
 vim.keymap.set("n", "<leader>8", function() ui.nav_file(8) end)
+vim.keymap.set("n", "<leader>9", function() ui.nav_file(9) end)
+vim.keymap.set("n", "<leader>0", function() ui.nav_file(10) end)
 
 vim.keymap.set("n", "<leader>t1", function() term.gotoTerminal(1) end)
 vim.keymap.set("n", "<leader>t2", function() term.gotoTerminal(2) end)
