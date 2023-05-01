@@ -7,8 +7,6 @@
 - **[.vimrc](https://github.com/mrs4ndman/setup/blob/main/.vimrc)** : .vimrc general para hacerlo más agradable, pero no un editor (para eso Neovim) | Simple .vimrc conf file (my main editor is Neovim)
 - **[rc-font-conf.sh](https://github.com/mrs4ndman/setup/blob/main/rc-font-conf.sh)** : Ayuda a configurar mi setup de nuevo | Setup script for the repo
 
-- **[starship.toml](https://github.com/mrs4ndman/setup/blob/main/starship.toml)** : Archivo de configuración de Starship (mi prompt de terminal) | Starship prompt config file
-
 ### Abierto a sugerencias | Open to suggestions
 
 :)
