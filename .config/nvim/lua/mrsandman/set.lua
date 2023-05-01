@@ -82,9 +82,6 @@ vim.o.undodir = '/home/mrsandman/.cache/nvim/undodir'
 -- NVIM Notify plugin
 vim.notify = require("notify")
 
--- NVIM LUALINE CONF
-
-
 -- RNVIMR CONFIG
 vim.g.rnvimr_ex_enable = 0
 vim.g.rnvimr_enable_bw = 1
@@ -97,7 +94,6 @@ vim.g.rnvimr_pick_create = 0
 
 vim.g.rnvimr_enable_treesitter = 1
 
-
--- Provider config
+-- Provider disabling config
 vim.g.loaded_perl_provider = 0
 

@@ -1,5 +1,6 @@
 -- Mr Sandman's .lua config for NVIM (NOT FINISHED) PACKER.lua
 
+
 vim.cmd [[packadd packer.nvim]] -- the doom begins
 
 return require('packer').startup(function(use)
@@ -8,6 +9,9 @@ use 'wbthomason/packer.nvim' -- c'mon, do your thing
 
 -- MAIN PLUGIN CONFIG
 -- INCLUDES LSP BASE CONFIG, TMUX CONFIG, AUTOPAIRS, 
+-- Plugin loader optimization:
+use 'lewis6991/impatient.nvim' -- speed go brr
+--
 --
 -- 1.- Telescope config
 
@@ -20,10 +24,13 @@ use {
 }
 
 
--- 2.- Load Telescope extensions
+-- 2.- Load Telescope native extensions
 use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-
+use 'nvim-telescope/telescope-file-browser.nvim'
+use 'nvim-telescope/telescope-ui-select.nvim'
+-- Telescope external extensions
 use 'cljoly/telescope-repo.nvim' --telescope extension #1, the others are inside telescope.lua
+use 'rcarriga/nvim-notify' -- telescope extension #2, cool neovim notis
 
 
 -- 3.- Theme plugin config
@@ -34,8 +41,6 @@ config = function()
 end
 })
 
--- Plugin loader optimization:
-use 'lewis6991/impatient.nvim' -- speed go brr
 
 -- 4.- Treesitter modules
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) -- colors go brr
@@ -76,7 +81,6 @@ use ({
 })
 
 -- Notifications and CSS color show
-use 'rcarriga/nvim-notify' -- Cool plugin notis
 use 'lcheylus/overlength.nvim'
 use 'ap/vim-css-color' -- Frontend stuff
 
