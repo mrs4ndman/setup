@@ -8,6 +8,8 @@
  Ctrl + f = Goes a full page down / forward
  Ctrl + b = Goes a full page up / backward
  
+ K = man page for word below cursor
+
  x = The better way to delete characters
  b & w = Jump backwards and forwards to the next word / different format of text (no need for space)
  W = Jump to the next space-separated text

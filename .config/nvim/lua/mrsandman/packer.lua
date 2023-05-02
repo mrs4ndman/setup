@@ -99,42 +99,7 @@ use {
 }
 
 
--- 8.- Autopairs & tabout for tabbing out of said pairs
-use {
-    "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-}
-
--- Lua config for tabout
-use {
-    'abecodes/tabout.nvim', -- Trying to get this to work, idk what's wrong with it XD
-    config = function()
-        require('tabout').setup {
-            tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
-            backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
-            act_as_tab = true, -- shift content if tab out is not possible
-            act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
-            default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
-            default_shift_tab = '<C-d>', -- reverse shift default action,
-            enable_backwards = true, -- well ...
-            completion = true, -- if the tabkey is used in a completion pum
-            tabouts = {
-                {open = "'", close = "'"},
-                {open = '"', close = '"'},
-                {open = '`', close = '`'},
-                {open = '(', close = ')'},
-                {open = '[', close = ']'},
-                {open = '{', close = '}'}
-            },
-            ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-            exclude = {} -- tabout will ignore these filetypes
-        }
-    end,
-    wants = {'nvim-treesitter'}, -- or require if not used so far
-    after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
-}
-
--- 9.- LSP Configuration
+-- 8.- LSP Configuration
 use {
     'VonHeikemen/lsp-zero.nvim', -- Big boi LSP
     branch = 'v2.x',
@@ -157,8 +122,43 @@ use {
 }
 
 
+-- 9.- Autopairs & tabout for tabbing out of said pairs
+use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+
+-- Lua tabout finally working
+use {
+    'abecodes/tabout.nvim',
+    config = function()
+        require('tabout').setup {
+            tabkey = '<Tab>', -- Key to tab me out of parenthesis and stuff
+            backwards_tabkey = '<S-Tab>', -- key to do backwards tabout, empty string to disable
+            act_as_tab = true, -- shift content if tab out is not possible
+            act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
+            enable_backwards = true, -- well ...
+            completion = true, -- if the tabkey is used in a completion pum
+            tabouts = {
+                {open = "'", close = "'"},
+                {open = '"', close = '"'},
+                {open = '`', close = '`'},
+                {open = '(', close = ')'},
+                {open = '[', close = ']'},
+                {open = '{', close = '}'},
+                {open = '<', close = '>'},
+                {open = '::', close = '::'} -- Rust maybe?
+            },
+            ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
+            exclude = {} -- tabout will ignore these filetypes
+        }
+    end,
+    wants = {'nvim-treesitter'}, -- or require if not used so far
+}
+
 -- 10.- Zen mode with Space + zz / zZ
 use "folke/zen-mode.nvim" -- Pure concentration
+
 
 
 -- 11.- Trouble: Diagnostics and status tool:
@@ -178,6 +178,7 @@ use ({
 -- 1X.- Devicons for rnvimr & telescope 
 use 'ryanoasis/vim-devicons'
 use 'nvim-tree/nvim-web-devicons'
+
 
 
 

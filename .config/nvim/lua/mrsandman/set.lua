@@ -5,6 +5,7 @@ vim.opt.guicursor = ""
 --
 -- Set default terminal mode to insert & remove line numbers in terminal buffers
 vim.cmd("autocmd! TermOpen * startinsert")
+
 vim.cmd([[
 augroup Terminal
     autocmd!
@@ -23,6 +24,9 @@ vim.cmd([[
 -- Remove padding in terminal
 vim.cmd('autocmd TermOpen * setlocal signcolumn=no')
 
+-- Highlight yanking action for a second
+vim.cmd("au TextYankPost * silent! lua vim.highlight.on_yank {timeout = 50}")
+
 -- Sidebar & tab config
 -- Numbers config
 vim.opt.nu = true
@@ -40,7 +44,7 @@ vim.opt.expandtab = true
 vim.cmd('set clipboard+=unnamedplus')
 
 -- Keep the sign column open
-vim.cmd('set signcolumn=yes')
+vim.opt.signcolumn = "yes"
 
 -- Highlight bracket pairs
 vim.cmd('set showmatch')
@@ -71,7 +75,7 @@ vim.opt.updatetime = 50
 vim.opt.timeoutlen = 2000
 
 -- Color columns
-vim.opt.colorcolumn = "90"
+vim.opt.colorcolumn = "80"
 
 -- Undotree & NVIM integration config:
 vim.o.swapfile = false
@@ -91,8 +95,11 @@ vim.g.rnvimr_bw_restore_screen_on_close = 1
 vim.g.rnvimr_draw_border = 1
 vim.g.rnvimr_pick_enable = 1
 vim.g.rnvimr_pick_create = 0
-
 vim.g.rnvimr_enable_treesitter = 1
+
+-- netrw config
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
 
 -- Provider disabling config
 vim.g.loaded_perl_provider = 0
