@@ -28,6 +28,7 @@ use {
 use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 use 'nvim-telescope/telescope-file-browser.nvim'
 use 'nvim-telescope/telescope-ui-select.nvim'
+
 -- Telescope external extensions
 use 'cljoly/telescope-repo.nvim' --telescope extension #1, the others are inside telescope.lua
 use 'rcarriga/nvim-notify' -- telescope extension #2, cool neovim notis
@@ -43,8 +44,14 @@ end
 
 
 -- 4.- Treesitter modules
-use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) -- colors go brr
+use {'nvim-treesitter/nvim-treesitter',
+    run = function()
+        local ts_update = require('nvim-treesitter.install').update({ with_sync = true})
+    ts_update()
+end,} -- colors go brr
 use 'nvim-treesitter/playground' -- hehe
+use 'nvim-treesitter/nvim-treesitter-context'
+
 
 -- 5.- External integration: Git, tmux, ranger & fzf, also remembers where I was in the buffer
 use 'christoomey/vim-tmux-navigator' -- tmux integration
@@ -59,9 +66,6 @@ use 'tpope/vim-commentary' -- Powerful commenting, thanks to tpope
 use 'farmergreg/vim-lastplace' -- Remembers where i left off the buffer
 use 'kevinhwang91/rnvimr' -- Terminal file manager integration
 
--- use {"akinsho/toggleterm.nvim", tag = '*', config = function()
---     require("toggleterm").setup()
--- end}
 
 -- 6.- ThePrimeagen plugins (Blazingly Fast)
 use 'ThePrimeagen/vim-be-good' -- Vim & Neovim keybind training
@@ -80,13 +84,14 @@ use ({
     end
 })
 
+
 -- Notifications and CSS color show
 use 'lcheylus/overlength.nvim'
 use 'ap/vim-css-color' -- Frontend stuff
 
 
--- Dashboard on startup config
---
+-- 7.1.- UX: Dashboard on startup config
+
 use {
     'glepnir/dashboard-nvim', -- Startup screen for nvim
     event = 'VimEnter',
@@ -98,6 +103,8 @@ use {
     requires = {'nvim-tree/nvim-web-devicons'}
 }
 
+-- Goofy stuff:
+use 'eandrju/cellular-automaton.nvim'
 
 -- 8.- LSP Configuration
 use {
@@ -106,8 +113,8 @@ use {
     requires = {
         -- LSP Support
         {'neovim/nvim-lspconfig'},             -- Required
-        {                                      -- Optional
-        'williamboman/mason.nvim',
+        {
+        'williamboman/mason.nvim',             -- Optional
         run = function()
             pcall(vim.cmd, 'MasonUpdate')
         end,
@@ -116,7 +123,12 @@ use {
 
     -- Autocompletion
     {'hrsh7th/nvim-cmp'},     -- Required
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
     {'hrsh7th/cmp-nvim-lsp'}, -- Required
+    -- Lua Snippets
+    {'saadparwaiz1/cmp_luasnip'},
+    {'rafamadriz/friendly-snippets'},
     {'L3MON4D3/LuaSnip'},     -- Required
 }
 }
@@ -127,6 +139,7 @@ use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
 }
+
 
 -- Lua tabout finally working
 use {
@@ -156,9 +169,9 @@ use {
     wants = {'nvim-treesitter'}, -- or require if not used so far
 }
 
+
 -- 10.- Zen mode with Space + zz / zZ
 use "folke/zen-mode.nvim" -- Pure concentration
-
 
 
 -- 11.- Trouble: Diagnostics and status tool:
@@ -178,8 +191,6 @@ use ({
 -- 1X.- Devicons for rnvimr & telescope 
 use 'ryanoasis/vim-devicons'
 use 'nvim-tree/nvim-web-devicons'
-
-
 
 
 end)

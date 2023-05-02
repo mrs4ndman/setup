@@ -13,9 +13,15 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- Buffer previous and next
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>bc", ":bd<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>", { noremap = true, silent = true })
+
+-- Treesitter context bindings:
+vim.keymap.set("n", "<leader>ct", "<cmd>TSContextToggle<CR>", { silent = true })
+
+-- Try it out if you're that desperate: 
+vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>", { silent = true })
 
 -- Netrw start 
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { silent = true })

@@ -16,7 +16,9 @@ for i = 1,9 do
     map('n', ('<leader>cs%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
 end
 
--- 2.- Cokeline theme config (@noib3's config on the cokeline gh examples):
+
+-- 2.- Cokeline theme config (@noib3's config on the cokeline gh examples + lil mods) :
+--
 local get_hex = require('cokeline/utils').get_hex
 local mappings = require('cokeline/mappings')
 
@@ -69,7 +71,7 @@ local components = {
 
   index = {
     text = function(buffer)
-      return buffer.index .. ': '
+      return buffer.index .. ' 󰁎 '
     end,
     truncation = { priority = 1 }
   },

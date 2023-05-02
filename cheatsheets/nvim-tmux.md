@@ -4,6 +4,8 @@
 
 - ### NORMAL:
 
+    - Ctrl + a = Iterate the number under the cursor
+
 	- Ctrl + d = Goes half a page down / forward | Baja media página
 	
 	- Ctrl + u = Goes half a page up | Sube media página
@@ -165,15 +167,20 @@
 
 - ### Harpoon plugin [ .config/nvim/after/plugin/harpoon.lua ]
 	
+    - Leader + h = harpoon main screen / plugin
+    - Leader + a = harpoon mark keybinding
+
 	- Leader + 1 = harpoon file 1
-	- Leader + 2 = harpoon file 1
-	- Leader + 3 = harpoon file 1
-	- Leader + 6 = harpoon file 1
-	- Leader + 7 = harpoon file 1
-	- Leader + 8 = harpoon file 1
+	- Leader + 2 = harpoon file 2
+	- Leader + 3 = harpoon file 3
+	- Leader + 4 = harpoon file 4
+	- Leader + 5 = harpoon file 5
+	- Leader + 6 = harpoon file 6
+	- Leader + 7 = harpoon file 7
+	- Leader + 8 = harpoon file 8
+	- Leader + 9 = harpoon file 9
+	- Leader + 10 = harpoon file 10
 	
-	- Leader + h = harpoon main screen / plugin
-	- Leader + a = harpoon mark keybinding
 	- Leader + t + 1 = harpoon terminal 1
 	- Leader + t + 2 = harpoon terminal 2
 	- Leader + t + 3 = harpoon terminal 3
@@ -182,10 +189,19 @@
 
 - ### LSP keybinds
 	
+    - gd = Go to definition
+    - K = Hover
+    - [d / ]d = Go to next and previous diagnostic hunks
+    - Ctrl + o = Bring up signature help
 	- Ctrl + p = Previous LSP suggestion / item
 	- Ctrl + n = Next LSP suggestion / item
 	- Ctrl + y = Confirm selected suggestion / item
 	- Ctrl + Space = Complete suggestion ??
+    - Leader + vca = Choose and execute available code actions
+    - Leader + vd = Open diagnostics in a floating window
+    - Leader + vrn = Rename references to the symbol under the cursor 
+    - Leader + vrr = View references
+    - Leader + vws = View LSP workspace symbol
 
 
 - ### Packer plugin manager
@@ -198,12 +214,24 @@
 	- Leader + r = Ranger with rnvimr plugin inside Neovim
 
 
+- ### Overlength plugin
+
+    - Leader + ol = Toggle overlength highlighting on / off
+
 - ### Telescope plugin & extensions
 	
+    - Leader + t + t = Telescope plugin main screen
 	- Leader + t + g = Live grep the file, telescope plugin
-	- Leader + t + h = History of recently opened files
+	- Leader + t + h = History of recently opened files, works with hidden folder files
 	- Leader + t + r = Repo list, repo telescope plugin
-	- Leader + t + t = Telescope plugin
+    - Inside of fuzzy finding window (works both in normal and insert modes) :
+        - Ctrl + n = Next selection
+        - Ctrl + p = Previous selection
+        - Ctrl + c = Close window and return to working buffer
+        - Ctrl + q = Send to quick-fix list
+        - Ctrl + i = Select more in horizontal (??)
+        - Ctrl + x = Select more in vertical (??)
+
 
 
 - ### Trouble plugin
@@ -217,8 +245,7 @@
  
 - ### Undotree plugin
 	
-	- Leader + u = Toggle Undo tree (pops window on the side
- (look in on how to make it autofocus))
+	- Leader + u = Toggle Undo tree (pops window on the side)
 
 
 - ### Zenmode plugin

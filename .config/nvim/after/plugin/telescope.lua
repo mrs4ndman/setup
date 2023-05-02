@@ -95,7 +95,7 @@ telescope.setup {
 
 
 -- Extension invoking:
---
+
 require('telescope').load_extension "fzf"
 require('telescope').load_extension "repo"
 require('telescope').load_extension "notify"

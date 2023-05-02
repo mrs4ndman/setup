@@ -103,11 +103,11 @@ ins_left {
         -- auto change color according to neovims mode
         local mode_color = {
             n = colors.pink,
-            i = colors.red,
+            i = colors.turquoise,
             v = colors.orange,
             [''] = colors.blue,
             V = colors.sorange,
-            c = colors.magenta,
+            c = colors.green,
             no = colors.red,
             s = colors.orange,
             S = colors.orange,
@@ -178,14 +178,14 @@ ins_left {
     -- cursor location in file component
     'location',
     color = { fg = colors.lime, gui = 'bold' },
-    padding = { left = 1, right = 1 }
+    padding = { left = 1, right = 0 }
 }
 
 ins_left {
     -- same as location but in % form
     'progress',
     color = { fg = colors.ultraviolet, gui = 'bold' },
-    padding = { left = 0, right = 0 }
+    padding = { left = 1, right = 0 }
 }
 
 -- Add components to right sections
@@ -236,7 +236,7 @@ ins_right {
     'fileformat',
     fmt = string.upper,
     icons_enabled = true,
-    color = { fg = colors.red, gui = 'bold' },
+    color = { fg = colors.white, gui = 'bold' },
     padding = { left = 1, right = 2}
 }
 
@@ -245,7 +245,7 @@ ins_right {
     -- Is it me or the symbol for modified us really weird
     symbols = { added = ' ', modified = '柳 ', removed = ' ' },
     diff_color = {
-        added = { fg = colors.green },
+        added = { fg = colors.lime },
         modified = { fg = colors.orange },
         removed = { fg = colors.red },
     },
