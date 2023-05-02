@@ -1,5 +1,8 @@
 # Them keybinds
 
+#### Got most of the binds from [him](https://youtube.com/playlist?list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R) 
+#### and his [config files](https://github.com/ThePrimeagen/init.lua)
+
 ## VIM / NVIM base modal motions & keybinds
 
 - ### NORMAL:
@@ -17,6 +20,14 @@
 
 	- x = The better way to delete characters
 	
+    - = = Indents the current line correctly
+
+    - =ap = Indents the whole paragraph & surrounding whitespace
+
+    - \> = Can be combined with a selection or motion to indent x number of lines
+    
+    - \< = Can be combined with a selection or motion to backwards-indent lines
+
 	- b & w = Jump backwards and forwards to the next word / different format of text (no need for space)
 	
 	- W = Jump to the next space-separated text
@@ -101,7 +112,22 @@
 
 ### VISUAL:
 
- V: Selects current line (can overwrite it by pasting it)
+- % = Used like, for example, Vf(%, it selects from the { to its matching }
+    - It allows you to jump between sets of characters ( {}, (), ' ', etc. )
+
+- V = Selects current line (can overwrite it by pasting it)
+- VD = Visually delete a whole line, technically faster than double tapping "d"
+- VY = Faster way to do the same as 'yy'
+
+- vi<delimiter> = Selects everything in between the delimiters ( {}, [], (), etc)
+- va<delimiter> = Selects everything (like vi) in and around (including the delimiters)
+- ya<delimiter> = Yanks with the same selection as va would do
+- viw = Selects in visual mode the whole word, doesn't care about positioning
+- viW = Same as viw but selects all text until there are whitespaces
+- o = Transfers your cursor to the top or bottom of the current visual selection 
+- vap & dap = They select / delete paragraphs AND the contiguous whitespace
+- vip & dip = They select / delete only the insides of the paragraphs
+
 
 
 ## NVIM: Custom keybinds with space as leader & modal keybinds for easy motions
@@ -112,12 +138,11 @@
 	
 	- Leader + Leader = Source current file
 	- Leader + b = Base binding for--
-	- Leader + b + n = Next buffer
-	- Leader + b + p = Previous buffer
-	- Leader + b + c = Buffer close / delete from list
+	    - Leader + b + n = Next buffer
+	    - Leader + b + p = Previous buffer
+	    - Leader + b + c = Buffer close / delete from list
 	
 	- Leader + e = Ex (Nvim Integrated Explorer)
-	- Leader + p = Base binding for-
 	- Leader + s = Substitutor for current word
 	- Leader + x = Make the current file executable (chmod +x)
 
@@ -260,7 +285,7 @@
 	- Leader + O = Nothing
 	- Leader + D = Nothing
 	- Leader + F = Nothing
-	- Leader + G = Nothing
+    - Leader + P = Nothing
 	- Leader + J = Nothing
 	- Leader + K = Nothing
 	- Leader + L = Nothing
