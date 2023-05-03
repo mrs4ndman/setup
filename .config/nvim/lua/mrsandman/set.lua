@@ -80,11 +80,15 @@ vim.opt.colorcolumn = "80"
 -- Undotree & NVIM integration config:
 vim.o.swapfile = false
 vim.o.backup = false
+vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.o.undofile = true
-vim.o.undodir = '/home/mrsandman/.cache/nvim/undodir'
 
 -- NVIM Notify plugin
 vim.notify = require("notify")
+
+-- NVIM-TREE CONFIG
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- RNVIMR CONFIG
 vim.g.rnvimr_ex_enable = 0
@@ -98,8 +102,8 @@ vim.g.rnvimr_pick_create = 0
 vim.g.rnvimr_enable_treesitter = 1
 
 -- netrw config
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
+-- vim.g.netrw_browse_split = 0
+-- vim.g.netrw_banner = 0
 
 -- Provider disabling config
 vim.g.loaded_perl_provider = 0

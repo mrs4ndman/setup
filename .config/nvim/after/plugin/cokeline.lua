@@ -137,6 +137,7 @@ local components = {
 require('cokeline').setup({
 --   show_if_buffers_are_at_least = 2, -- It allows to hide it when in a single buffer
   buffers = {
+    focus_on_delete = 'next',
     -- filter_valid = function(buffer) return buffer.type ~= 'terminal' end,
     -- filter_visible = function(buffer) return buffer.type ~= 'terminal' end,
     new_buffers_position = 'next',
@@ -156,6 +157,17 @@ require('cokeline').setup({
     bg = get_hex('ColorColumn', 'bg'),
   },
 
+  sidebar = {
+      filetype = 'NvimTree',
+      components = {
+          {
+              text = ' ey b0ss',
+              fg = red,
+              style = 'bold',
+          },
+      }
+  },
+
   components = {
     components.space,
     components.separator,
@@ -169,6 +181,7 @@ require('cokeline').setup({
     components.two_spaces,
     components.close_or_unsaved,
     components.space,
+    components.sidebar,
   },
 })
 

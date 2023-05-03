@@ -61,6 +61,7 @@ use 'junegunn/fzf' -- Fuzzy searching integration
 use 'lewis6991/gitsigns.nvim' -- Git signs on the gutter
 
 use 'tpope/vim-fugitive' -- Git integration
+use 'tpope/vim-surround' -- The power of surroundings
 use 'tpope/vim-commentary' -- Powerful commenting, thanks to tpope
 
 use 'farmergreg/vim-lastplace' -- Remembers where i left off the buffer
@@ -71,6 +72,8 @@ use 'kevinhwang91/rnvimr' -- Terminal file manager integration
 use 'ThePrimeagen/vim-be-good' -- Vim & Neovim keybind training
 use 'ThePrimeagen/harpoon' -- Reeling those files in
 use 'mbbill/undotree' -- What was that thing I did 10 days ago? Leader + U
+-- Goofy stuff:
+use 'eandrju/cellular-automaton.nvim'
 
 
 -- 7.- UI customization
@@ -103,8 +106,8 @@ use {
     requires = {'nvim-tree/nvim-web-devicons'}
 }
 
--- Goofy stuff:
-use 'eandrju/cellular-automaton.nvim'
+use 'nvim-tree/nvim-tree.lua'
+
 
 -- 8.- LSP Configuration
 use {

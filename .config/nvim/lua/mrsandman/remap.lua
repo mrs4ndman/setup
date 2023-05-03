@@ -10,7 +10,7 @@ vim.g.mapleader = " "
 -- Source current config file
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
-end)
+end, { silent = true })
 
 -- Buffer previous and next
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { noremap = true, silent = true })
@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>ct", "<cmd>TSContextToggle<CR>", { silent = true })
 vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>", { silent = true })
 
 -- Netrw start 
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { silent = true })
+vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle, { silent = true })
 
 -- Overlength toggle
 vim.keymap.set("n", "<leader>ol", ":OverlengthToggle<CR>", { silent = true })
@@ -77,7 +77,7 @@ vim.keymap.set("n", "Q", "<nop>")
 -- INSERT mode Keybinds
 
 -- How to escape Vim Insert mode: keybind edition:
-vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-c>", "<Esc>", { silent = true })
 
 
 -- VISUAL mode Keybinds
