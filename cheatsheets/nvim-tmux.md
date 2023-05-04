@@ -239,6 +239,21 @@
 	- Leader + r = Ranger with rnvimr plugin inside Neovim
 
 
+- ### Surround plugin
+
+    - c + s + current surrounding + new surrounding = Change current for new surrounding signs / marks
+    - c + s + t = go back to previuos pair
+    - d + s + current surrounding = Delete current surrounding delimiters / signs / marks
+    - y + s + iw motion + surrounding = Add another surrounding inside the current one
+    - y + s + s + b or ) = Wrap the entire line in parentheses
+    - V + S + 'XML tag / surrounding' = this can surround the entire current line in the surroundig / XML tag
+
+    - Only the opening brackets used with surround pad the surrounded text with a space
+    - To surround without padding, use the closing brackets
+
+[Hello] world!
+
+
 - ### Overlength plugin
 
     - Leader + ol = Toggle overlength highlighting on / off
