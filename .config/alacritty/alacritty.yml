@@ -12,12 +12,12 @@
 #  - /path/to/alacritty.yml
 
 env:
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
+    # This value is used to set the `$TERM` environment variable for
+    # each instance of Alacritty. If it is not present, alacritty will
+    # check the local terminfo database and use `alacritty` if it is
+    # available, otherwise `xterm-256color` is used.
 
 
 # GENERAL / BASE CONFIG - CONFIGURACIÓN GENERAL / BÁSICA
@@ -35,8 +35,8 @@ window:
 
   # Window padding (changes require restart)
   padding:
-    x: 7 
-    y: 7
+    x: 5 
+    y: 3
 
   dynamic_padding: true
 
@@ -47,21 +47,21 @@ window:
   #
   decorations: none 
 
+  opacity: 0.86
+  #
   # Background opacity - Opacidad del fondo
   # Window opacity as a floating point number from `0.0` to `1.0`.
-  #
-  opacity: 0.8
 
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
+  # - Windowed
+  # - Maximized
+  # - Fullscreen
   #startup_mode: Windowed
 
-  # Window title - Título de ventana para el sistema operativo
   title: Terminal
+  # Window title - Título de ventana para el sistema operativo
 
-  # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
+  # Allow terminal applications to change Alacritty's window title.
 
   # Window class (Linux/BSD only):
   #class:
@@ -71,29 +71,29 @@ window:
     #general: Alacritty
 
 
+  decorations_theme_variant: Dark
   # Decorations theme variant - Variante de tema de color
   #
   # Override the variant of the System theme/GTK theme/Wayland client side
   # decorations. Commonly supported values are `Dark`, `Light`, and `None` for
   # auto pick-up. Set this to `None` to use the default theme variant.
-  decorations_theme_variant: Dark
 
 scrolling:
+  history: 10000
   # Maximum number of lines in the scrollback buffer. - Máximo número de líneas de scroll
   # Specifying '0' will disable scrolling.
-  history: 10000
 
-  # Scrolling distance multiplier. - Multiplicador de scroll
   multiplier: 3
+  # Scrolling distance multiplier. - Multiplicador de scroll
 
 # FONT CONFIGURATION - CONFIGURACIÓN DE FUENTES
 font:
-  #
+ 
   # Normal (roman) font face - Fuente para texto normal
   normal: 
     family: Jetbrains Mono Nerd Font
 
-    style: Medium
+    style: Regular
 
   # Bold font face - Fuente para texto en negrita
   bold:
@@ -118,7 +118,7 @@ font:
     style: BoldItalic
 
   # Point size - Tamaño de fuente
-  size: 12.0
+  size: 11
 
   # Use built-in font for box drawing characters.
   #
@@ -351,7 +351,7 @@ cursor:
   blink_interval: 1000
 
   # Specifying '0' will disable timeout for blinking.
-  blink_timeout: 30
+  blink_timeout: 0
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
