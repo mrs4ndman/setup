@@ -248,10 +248,9 @@
     - y + s + s + b or ) = Wrap the entire line in parentheses
     - V + S + 'XML tag / surrounding' = this can surround the entire current line in the surroundig / XML tag
 
-    - Only the opening brackets used with surround pad the surrounded text with a space
-    - To surround without padding, use the closing brackets
+        - Only the opening brackets used with surround pad the surrounded text with a space
+        - To surround without padding, use the closing brackets
 
-[Hello] world!
 
 
 - ### Overlength plugin
@@ -322,14 +321,15 @@
 	- ### Most used:
 	
 	- ##### Layouts:
+
 		- Leader + ( Alt + 1 ) = Even-horizontal layout
 		- Leader + ( Alt + 2 ) = Even-vertical layout
 		- Leader + ( Alt + 3 ) = Main horizontal layout
 		- Leader + ( Alt + 4 ) = Main vertical layout
 		- Leader + ( Alt + 5 ) = Tiled layout
 	
-	- Leader + ( Ctrl + Up / Down / Left / Right ) = Resize the current pane in 1-cell steps
-	- Leader + ( Alt + Up / Down / Left / Right ) = Resize the current pane in 5-cell steps
+    	- Leader + ( Ctrl + Up / Down / Left / Right ) = Resize the current pane in 1-cell steps
+	    - Leader + ( Alt + Up / Down / Left / Right ) = Resize the current pane in 5-cell steps
 	
 	
 	- ##### Panes:
@@ -360,9 +360,17 @@
 		- Leader + [Ctrl + s] = Sends prefix to the application
 		- Leader + t = CLI-rendered clock
 		- Leader + z = Toggles zoom / focus mode
-		- Leader + r = Reload tmux.conf
+        - Leader + r = Reload tmux.conf
+	
+    - #### Custom keybinds
 		- Leader + : = Enter the tmux command prompt
 		- Leader + [Ctrl + z] = Suspends the tmux client
+        - Leader + i = tmux-cht.sh
+        - Leader + f = tmux-sessionizer
+        - Leader + D = tmux-sessionizer dotfiles
+        - Leader + G = tmux-sessionizer github
+        - Leader + S = tmux-sessionizer setup
+        - Leader + ^ = Swap to last window
 
 
 	- ##### Sessions & clients
