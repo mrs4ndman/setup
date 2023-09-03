@@ -40,7 +40,6 @@ cargo install git-delta onefetch stylua tree-sitter wiki-tui tokei
 cargo install --git https://github.com/loichyan/nerdfix.git
 ```
 
-APT list:
 ```bash
 sudo apt install \
 adduser \
