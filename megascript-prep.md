@@ -36,7 +36,10 @@ sudo npm install -g neovim
 
 # Cargo installed:
 ```bash
-cargo install git-delta onefetch stylua tree-sitter wiki-tui tokei
+sudo apt install expat
+sudo apt install libxml2-dev
+sudo apt install pkg-config libasound2-dev libssl-dev cmake libfreetype6-dev libexpat1-dev libxcb-composite0-dev libharfbuzz-dev
+cargo install git-delta onefetch stylua tree-sitter wiki-tui tokei silicon
 cargo install --git https://github.com/loichyan/nerdfix.git
 ```
 
@@ -78,8 +81,6 @@ git \
 gnome-sudoku \
 gnome-tweaks \
 gnupg \
-golang-go \
-golang \
 gparted \
 gpg \
 gnupg \
@@ -118,7 +119,7 @@ python3.11 \
 pulsemixer \
 playerctl \
 ranger \
-rig \ \
+rig \
 rar \
 refind \
 remmina \
