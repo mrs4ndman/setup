@@ -1,10 +1,38 @@
-Special ones that apt can manage:
+## Special ones that apt can manage:
 bat-musl (git)
 btop (git)
 cava (git)
 tmux (git or apt)
 neovim (git) + pre-made configs
+
+## Neovim installation
 ```bash
+# Build prerequisites
+sudo apt-get install ninja-build gettext cmake unzip curl
+
+# Creation of install directory
+mkdir -p /home/mrsandman/git-clone-zone
+git clone https://github.com/neovim/neovim /home/mrsandman/git-clone-zone/neovim
+
+cd /home/mrsandman/git-clone-zone/neovim/
+
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+cd build/ && cpack -G DEB
+
+sudo dpkg -i nvim-linux64.deb
+```
+
+- Neovim distro switcher setup
+```bash
+rm -rf ~/.config/kickstart-nvim/
+rm -rf ~/.config/NormalNVim/
+rm -rf ~/.config/AstroNvim/
+rm -rf ~/.config/LazyVim/
+rm -rf ~/.config/DuskNvim/
+rm -rf ~/.config/SmallNvim/
+rm -rf ~/.config/MonstahNvim/
+
 git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/kickstart-nvim
 git clone git@github.com:NormalNVim/NormalNVim.git ~/.config/NormalNVim
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/AstroNvim
@@ -109,7 +137,15 @@ neofetch \
 net-tools \
 ninja-build \
 nyancat \
+okular \
 pandoc \
+pandoc-citeproc \
+pdflatex \
+texlive-latex-base \
+texlive-fonts-recommended \
+texlive-fonts-extra \
+texlive-latex-extra \
+texlive-pictures \
 perl \
 pong2 \
 psensor \
@@ -158,6 +194,7 @@ virtualbox \
 wget \
 xxd \
 yt-dlp \
+zathura \
 zip \
 zsh 
 ```
